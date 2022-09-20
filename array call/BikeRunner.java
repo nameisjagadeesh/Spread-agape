@@ -12,7 +12,7 @@ class BikeRunner{
 		String [] colors={"blue","red","silver","white","grey","black","voilet","orange","green","stealthblack","brown","pink",};
 		Bike.color=colors;
 		String [] company={"yamaha","RE","TVS","BMW","KAWASAKI","HONDA","HERO","SUZUKI","OKINAVA","ATHER","BAJAJ","JAWA",};
-		Bike.companynames=name;
+		Bike.companynames=company;
 		byte [] years={100,89,98,75,48,102,114,69,87,85,84,97};
 		Bike.durability=years;
 		double [] agalas={4.5,6.5,7.2,2.6,6.8,4.9,8.9,7.6,3.2,5.5,9.5,7.6};

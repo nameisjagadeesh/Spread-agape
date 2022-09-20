@@ -28,10 +28,10 @@ class Bike{
 		if(names!=null)
 		{
 			System.out.println("array is pointing to names adress");
-			System.out.println("total names:"+color.length);
-			for(int hesru=0;hesru<names.length;hesru++)
+			System.out.println("total names:"+names.length);
+			for(int hesru=names.length-1;hesru>=0 && hesru<names.length;hesru--)
 			{
-				String nama=color[hesru];
+				String nama=names[hesru];
 				System.out.println(nama);
 			}
 		}
@@ -57,7 +57,7 @@ class Bike{
 			System.out.println("total companynames:"+companynames.length);
 			for(int brands=0;brands<companynames.length;brands++)
 			{
-				String dolly=color[brands];
+				String dolly=companynames[brands];
 				System.out.println(dolly);
 			}
 		}
@@ -71,7 +71,7 @@ class Bike{
 			System.out.println("total durabilities:"+durability.length);
 			for(int life=0;life<durability.length;life++)
 			{
-				String expected=color[life];
+				byte expected=durability[life];
 				System.out.println(expected);
 			}
 		}
@@ -85,7 +85,7 @@ class Bike{
 			System.out.println("total width:"+width.length);
 			for(int agala=0;agala<width.length;agala++)
 			{
-				String ref=color[agala];
+				double ref=width[agala];
 				System.out.println(ref);
 			}
 		}
@@ -99,7 +99,7 @@ class Bike{
 			System.out.println("total height:"+height.length);
 			for(int ettara=0;ettara<height.length;ettara++)
 			{
-				String akasha=color[ettara];
+				double akasha=height[ettara];
 				System.out.println(akasha);
 			}
 		}
@@ -113,7 +113,7 @@ class Bike{
 			System.out.println("total weight:"+weight.length);
 			for(int bhara=0;bhara<weight.length;bhara++)
 			{
-				String kgs=color[bhara];
+				double kgs=weight[bhara];
 				System.out.println(kgs);
 			}
 		}
@@ -127,7 +127,7 @@ class Bike{
 			System.out.println("total rimsize:"+rimsize.length);
 			for(int chakra=0;chakra<rimsize.length;chakra++)
 			{
-				String round=color[chakra];
+				short round=rimsize[chakra];
 				System.out.println(round);
 			}
 		}
@@ -141,7 +141,7 @@ class Bike{
 			System.out.println("total price:"+price.length);
 			for(int bele=0;bele<price.length;bele++)
 			{
-				String hana=color[bele];
+				long hana=price[bele];
 				System.out.println(hana);
 			}
 		}
@@ -155,7 +155,7 @@ class Bike{
 			System.out.println("total speed:"+speed.length);
 			for(int ota=0;ota<speed.length;ota++)
 			{
-				String fast=color[ota];
+				int fast=speed[ota];
 				System.out.println(fast);
 			}
 		}
@@ -169,7 +169,7 @@ class Bike{
 			System.out.println("total material:"+material.length);
 			for(int vasthu=0;vasthu<material.length;vasthu++)
 			{
-				String ref0=color[vasthu];
+				String ref0=material[vasthu];
 				System.out.println(ref0);
 			}
 		}
@@ -183,7 +183,7 @@ class Bike{
 			System.out.println("total modelnames:"+modelnames.length);
 			for(int varients=0;varients<modelnames.length;varients++)
 			{
-				String style=color[varients];
+				String style=modelnames[varients];
 				System.out.println(style);
 			}
 		}
