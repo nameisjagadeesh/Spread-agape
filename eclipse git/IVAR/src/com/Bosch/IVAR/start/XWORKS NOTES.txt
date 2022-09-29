@@ -1,0 +1,123 @@
+X-WORKZ CLASS NOTES 24/08/22
+JAVA IS DEVELOPED BY JAMES GOSLING
+java is high level object oriented programing language
+object oriented means a way to develop softeware
+language is a means of communication
+programming language is any language that is executed on computer system 
+program is the decision , set of activity combined to perform a specific task
+syntax in java is grammer to undertand n follow ,it is provides by pro lang
+main purpose of devlopper is to maintain and the manage the user data
+JDK:JAVA DEVELOPMENT KIT>WRITING PROGRAM>JAVA TO RUN PROGRAM;JAVAC TO CONVERT ENGLISH TO JAVA
+JRE:JAVA RUNTIME ENV>RUN PROGRAM , JRE HAS JVM
+JVM:JAVA VIRTUAL MACHINE>RUNS N EXCECUTE THE PROGRAM
+JRE CONSIST OF JVM
+JAVA IS WIDELY USED PROGRAMMING LANGUAGE FOR CODING WEB APPLICATION
+JAVAC COMPILES PROGRAM LANGUAGE INTO CLASS FILES THAT RUN ON THE JVM ,JAVAC USES JRE
+
+platform is combinatiom of software n hardesware ex;ios n hardeware
+java is platform independent
+WORA -WRITE ONCE RUN ANYWHERE once compiled 
+byte code is a special format which is understood by only JVM,CLASS=BYTE CODE
+javac generates bytecode
+developers writes source code
+PLATFORM INDEPENDENT, IS JAVA COMPILED CODE (BYTE CODE) CAN RUN ON ALL OS
+
+jAVA IS OBJECT ORIENTED PROGRAMMING LANGUAGE,JAVA REPRESENTS REAL WORLD
+OBJECT HAS STATES(DATA) AND BEHAVIOUR(ACTION)
+jvm look for main method to execute
+PUBLIC STATIC VOID MAIN(STRING[] ARG)
+
+main method is first method to start program
+MEMORY RAM, HEAP MEMORY, META SPACE
+HEAP TO EXECUTE JAVA PRO
+CLASS LOADER IS A CLASS WHICH LOADS INFO OF CLASSES INTO META SPACE ,JVM USES CLASS LOADER
+META SPACE IS TO LOAD CLASS INFO
+STACK TO EXECUTE METHODS ,it will look for perticular mathod
+CONSTANT POOL TO SToRE PREMITIVE
+INSTANCE MEMORY TO STORE NON PREMITIVE
+system.out.println(statement)> system:is class,. is operator,out: static variable ,statement is args , println is static method , S should b in caps
+output in java is information
+use of writing program is to represent objec ,
+data=is variable.> ways/types=static,instance,loacal,parameter ,data is use to store data
+declaring a variable=datatype refname(value)
+initialise a variable=by adding ;(semicolon which means end of statemnet)
+datatype in java are 2 types =premitive n non premitive, premitive is to denote values, non primitive to compex value
+tyepes of primitive parameter(java dataypes)=byte ,short ,int , long ,float ,double, boolean, char
+
+non primitive =any class we write is non premitive ,types=countless
+any class will  have state and behaviour
+local variable=declared within method body
+pop=removing  a method
+concatenation to add  which join results,adding strings together(+)
+if two ref pointing to same memory we have to use "doble equals operater(==)" ,it will never check value
+
+variable can never hold value it will only ref to adress
+Scopes{}=using the data in a boundary ,ex;voter id scope is ward ,DL-nation with bigger scope passport;worldwide
+
+reference is pointing to adress
+variable is something which changes
+ref variable which changes the adress
+array is a collection of similara types of datatype or collection of variables of the same data type ,array is a container to store multiple data
+array is non primitive ,any class is non premitive which has state n behaviour
+primitive has no state and behaviour
+array is group of reference of any dataypes(premitive or non premitive) array is also a data type "(datatype[] variablename}" ex=char []sizes;
+[]is to hold multiple reference 
+two ways to initialise array :{} or new keyword
+index=length-1
+
+string is a sequence of charecters=String =""
+default value is given by jvm static n instance variable
+local variable is one which is within main method
+static, instance variable are class varibales
+local and parameter are methods
+
+null =which is pointing to no memory adress; it can be only non primitive
+void=is return type which ref to no adress
+return is use to stop the execution in any method
+break is use to stop in loop
+method is the set of statements;
+parameter is a local variable which is declared within (),it can be initiated inside and outside,cant be declared before initialisation
+local variable is declared within body only(inside),it can be initialised before declaration,
+argument is a reference passed to method()
+
+polymarphism is using same word in java to mean different things in differentcontext or (same thing but in different form)
+types of polymarphism=overloading-which is of same method but different in parameter ,overloading is a compile time polymarphism
+variable can be initialised in 4 ways==literals,constructor,methods,class(or reference)
+
+
+https://ghp_7wHJAuBZ95WmEWu95ZgWZSSEfx0LoF1Vvct@github.com/nameisjagadeesh/IVAR-in.git
+
+
+https://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@github.com/nameisjagadeesh/IVAR-in.git
+
+github steps;
+Sign up 
+create the repo
+Settings--> Developer Settings --> Personal access token--> Generate Token ---> Copy and paste 
+Download Git tool (Git bash)
+install git 
+Go to Any Drive (D): create a folder --> any name 
+Inside the folder --> right click --> git bash 
+git clone https://replace_token @github.com/xworkzodc/rocky_bhai.git
+(copy the repo from remote to local)
+cd repo_name: u see main branch after cd 
+git config --global user.email "your_email"
+Save .java files inside the repo /folder 
+git add ./
+git status 
+git commit -m "message test"
+git push origin main (name of the branch)
+
+agape token 
+	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
+https://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@github.com/nameisjagadeesh/Spread-agape.git
+https://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@github.com/nameisjagadeesh/IVAR-in.git
+
+
+
+
+
+
+
+ 
+ 
