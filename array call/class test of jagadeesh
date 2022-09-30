@@ -1,0 +1,71 @@
+name =jagadeesh allagi 7411833326 allagijagadeesh.xworkz@gmail.com 
+
+1.what is platform independent?
+    platform independent in any programming is condition  where  program once compiled it can be run on any platform or OS . java is one kind of example of platform  
+	independent ,java can be run on any platform .WORA(Orite Once Run anywhere) in programming makes it platform independent
+	example:java ,bytecode(.class file)
+	platform independent programs can be run on any OS like android ,IOS,window.....etc
+	this will make the job of programming easy which can be accessed from any platform
+	java programming language was the first platform independent language.
+	
+	
+2.difference between primitive and non primitive data type?
+  primitive datatype:is one which has no states and behaviour 
+  primitive datatype are 8 types=byte,short,int,long,double,float,boolean,char(charecter).
+  non primitive datatype:are variables which has states and behaviour.
+  example of non primitive:array,string or anyclass we declare.
+  
+3.class and its members?
+  class is kind of name given while writing the program ,class is type of non primitive data type 
+  members of class=class name ,references,statements...etc(i dont have much knowledge and i will learn about this)
+  
+4.class Marksheet{
+public static void main(String[] args){
+int total marks =600;
+int total marks received=554;
+float total percentage =0.0f;
+System.out.println("enetered marks and percentage");
+float percentage=received marks/total makrks*100;
+System.out.println("the percentage of marks:"+percentage);
+return;
+}
+}
+
+ 
+
+6.main method with memory it executes in?
+   main method is a kind of syntax used while writing the program ,JVM always looks for the main method before executes the program.
+   the memory used in main methods are=heapmemory,metaspace,stack,constanypool,classloader,instance memory.
+   the stack memory used to execute the methods by creating the frames one above the above and deletes them once the executed .
+   constantpool use to stote the values
+   metaspace to load the info of class loader
+   class loader store the info of class.
+   
+   
+7.class Reverse{
+public static void main(String[] args){
+int numbers={5,65,84,9,75,98,45,25}
+System.out.println("finding reverse numbers");
+for(int index=numbers.length-1;index<numbers.length;index--)
+  int reverse=numbers[index]
+  System.out.println( "backward number :"+reverse);
+ System.out.println("found reverse numbers"); 
+}
+}
+   
+8.class TimeRunner{
+public static void main(String[] args){
+short hours=0;
+short second=0;
+System.out.println("converting hours into seconds");
+short hours=2;
+short seconds=hours/60*60;
+System.out.println("converted time:"+seconds);
+System.out.println("converted  hours into seconds");  //i am not sure whether it is correct or not ,but i will learn about this.
+
+}
+}
+  
+  
+  question number 5 and 9 are no completed as i dont know exact answeres.
+  
