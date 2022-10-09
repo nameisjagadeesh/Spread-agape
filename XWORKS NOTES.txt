@@ -84,6 +84,12 @@ polymarphism is using same word in java to mean different things in differentcon
 types of polymarphism=overloading-which is of same method but different in parameter ,overloading is a compile time polymarphism
 variable can be initialised in 4 ways==literals,constructor,methods,class(or reference)
 
+import of package
+1. import statement : use classes from different package
+2. in-line import : use when two classes with same name, from different package 
+3. static import : to use static members without using class name 
+4. wild card imports : use multiple classes from same package
+
 
 https://ghp_7wHJAuBZ95WmEWu95ZgWZSSEfx0LoF1Vvct@github.com/nameisjagadeesh/IVAR-in.git
 
@@ -109,7 +115,7 @@ git commit -m "message test"
 git push origin main (name of the branch)
 
 agape token 
-	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
+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
 https://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@github.com/nameisjagadeesh/Spread-agape.git
 https://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@github.com/nameisjagadeesh/IVAR-in.git
 
