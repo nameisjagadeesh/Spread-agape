@@ -16,7 +16,7 @@ JAVAC COMPILES PROGRAM LANGUAGE INTO CLASS FILES THAT RUN ON THE JVM ,JAVAC USES
 
 platform is combinatiom of software n hardesware ex;ios n hardeware
 java is platform independent
-WORA -WRITE ONCE RUN ANYWHERE once compiled 
+WORA -WRITE ONCE RUN ANYWHERE once compiled i
 byte code is a special format which is understood by only JVM,CLASS=BYTE CODE
 javac generates bytecode
 developers writes source code
@@ -89,6 +89,10 @@ import of package
 2. in-line import : use when two classes with same name, from different package 
 3. static import : to use static members without using class name 
 4. wild card imports : use multiple classes from same package
+
+copy : static has one copy n nonstatic has many copies
+constructor is a special mathod ,it is same as class name ex:Bike() or Bike();
+constructor has no return type
 
 
 https://ghp_7wHJAuBZ95WmEWu95ZgWZSSEfx0LoF1Vvct@github.com/nameisjagadeesh/IVAR-in.git
