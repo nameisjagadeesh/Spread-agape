@@ -1,7 +1,7 @@
 package com.xworkz.copy.boot;
 
 import com.xworkz.copy.examples.Cigarette;
-import com.xworkz.copy.examples.Tea;
+
 
 public class CigeretteRunner {
 
