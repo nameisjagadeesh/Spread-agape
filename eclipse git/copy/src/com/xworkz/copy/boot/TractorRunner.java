@@ -25,7 +25,7 @@ public class TractorRunner {
 		
 		System.out.println(System.lineSeparator());
 		System.out.println("====chaining name , brand ,weight and price===");
-		Tractor tractor2=new Tractor("swaraj", 458769L, "mahindra", 12.55);
+		Tractor tractor2=new Tractor("swaraj", 458769L, "mahindra", 1255);
 		System.out.println(tractor2.name);
 		System.out.println(tractor2.price);
 		System.out.println(tractor2.brand);
