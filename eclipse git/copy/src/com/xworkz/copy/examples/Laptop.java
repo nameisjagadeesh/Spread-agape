@@ -18,7 +18,7 @@ public class Laptop {
 		this.price=price;
 		this.type=type;
 		this.weight=weight;
-		
+		this.quantity=quantity;
 		System.out.println("details of laptop by instance variables=long price, double weight ,String type");
 		
 	}
