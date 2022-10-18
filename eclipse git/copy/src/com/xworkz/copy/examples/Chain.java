@@ -1,3 +1,4 @@
+
 package com.xworkz.copy.examples;
 //constructor chaining of class Chain==super n this types
 
@@ -54,3 +55,4 @@ public class Chain {
 	}
 
 }
+
