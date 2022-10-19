@@ -1,4 +1,4 @@
-package com.xworkz.copy.examples;
+package com.xworkz.copy.examples; 
 //here i declared the methods to access all details
 public class Light {
 	public String company;

@@ -21,6 +21,8 @@ byte code is a special format which is understood by only JVM,CLASS=BYTE CODE
 javac generates bytecode
 developers writes source code
 PLATFORM INDEPENDENT, IS JAVA COMPILED CODE (BYTE CODE) CAN RUN ON ALL OS
+Datatype is a set of values and set of operations defined on those values
+Variables are containers which stores the values
 
 jAVA IS OBJECT ORIENTED PROGRAMMING LANGUAGE,JAVA REPRESENTS REAL WORLD
 OBJECT HAS STATES(DATA) AND BEHAVIOUR(ACTION)
@@ -85,49 +87,36 @@ types of polymarphism=overloading-which is of same method but different in param
 variable can be initialised in 4 ways==literals,constructor,methods,class(or reference)
 
 import of package
-1. import statement : use classes from different package
+1. import statement : use classes from same package
 2. in-line import : use when two classes with same name, from different package 
 3. static import : to use static members without using class name 
 4. wild card imports : use multiple classes from same package
 
 copy : static has one copy n nonstatic has many copies
-constructor is a special mathod ,it is same as class name ex:Bike() or Bike();
+constructor is a special mathod ,it is same as class name ex:Bike() or Bike();  
 constructor has no return type
+compiler will provides no-argument constructor
+public Gold(){} is constructor type
+public void Gold(){} is method type
+instantiation is initiating the non primitive,it is making copies in instance memory
+initialisation for primitive instance variables,instance creates many copies
 
+New is a keyword which allocates the memory in instance
+instance creation/object creation ex =Song type=new Song;
+Garbage Collection in java when ref is not pointing to any memory java (JVM) will automatically clear or recliams that memory
+FQN=Fully Qualified Name is path+classname
 
-https://ghp_7wHJAuBZ95WmEWu95ZgWZSSEfx0LoF1Vvct@github.com/nameisjagadeesh/IVAR-in.git
-
-
-https://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@github.com/nameisjagadeesh/IVAR-in.git
-
-github steps;
-Sign up 
-create the repo
-Settings--> Developer Settings --> Personal access token--> Generate Token ---> Copy and paste 
-Download Git tool (Git bash)
-install git 
-Go to Any Drive (D): create a folder --> any name 
-Inside the folder --> right click --> git bash 
-git clone https://replace_token @github.com/xworkzodc/rocky_bhai.git
-(copy the repo from remote to local)
-cd repo_name: u see main branch after cd 
-git config --global user.email "your_email"
-Save .java files inside the repo /folder 
-git add ./
-git status 
-git commit -m "message test"
-git push origin main (name of the branch)
-
-agape token 
-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
-https://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@github.com/nameisjagadeesh/Spread-agape.git
-https://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@github.com/nameisjagadeesh/IVAR-in.git
-
-
-
-
-
-
-
- 
- 
+constructors are mainly used to initialise instance variable during instance creation
+4 ways to initialise constructor =literals(default),reference(to update),constructor and methods
+instance means copy
+constructor can be executed in stack
+this. is a keyword used when instance variable names and local variable names are same
+this. keyword used in variable,methods,constructor
+c programing language was developed by Dennis Richie
+constructor chaining=when one constructor calls another constructor 
+types of chaining=super(default/implicit::when calling from parent class) and this(calling from same class)
+class level variable=static and non static
+class variables=static 
+any example we say is class,datatype,nonprimitive,object
+F6 to execute one by one
+F8 to close n come out
