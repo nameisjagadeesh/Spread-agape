@@ -27,6 +27,7 @@ public class Home {
 		System.out.println("type of home:" + this.type);
 		System.out.println("ownername is :" + this.name);
 		System.out.println("total floors are :" + this.floors);
+		System.out.println("total floors numbers are :" + this.floors.number);
 		System.out.println("rent is :" + this.rent);
 		System.out.println("is it affordable :" + this.affordable);
 	}

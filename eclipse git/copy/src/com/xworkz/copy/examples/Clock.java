@@ -27,13 +27,13 @@ public class Clock {
 	public void timeing() {
 		System.out.println("clock name is :"+this.name);
 		System.out.println("clock type is :"+this.type);
-		System.out.println(this.type.time);
+		System.out.println("args passed to clock type is :"+this.type.time);
 		System.out.println("clock number is :"+this.numbers);
 		System.out.println("clock nocode is :"+this.numbers.no);
 		System.out.println("clock price is :"+this.numbers.price+"rs");
-		System.out.println("clock weight is :"+this.weight);
+		System.out.println("clock weight is :"+this.weight+"kgs");
 		System.out.println("clock code is :"+this.code);
-		System.out.println(this.code.value);
+		System.out.println("args passed to clock code is :"+this.code.value);
 		System.out.println("batterylife in minutes :"+this.BatteryLife);
 		
 	}
