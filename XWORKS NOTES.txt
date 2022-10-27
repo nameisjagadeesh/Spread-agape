@@ -97,18 +97,18 @@ constructor is a special mathod ,it is same as class name ex:Bike() or Bike();
 constructor has no return type
 compiler will provides no-argument constructor
 public Gold(){} is constructor type
-public void Gold(){} is method type
+public void Gold(){} is method type -instance method
 instantiation is initiating the non primitive,it is making copies in instance memory
 initialisation for primitive instance variables,instance creates many copies
 
 New is a keyword which allocates the memory in instance
 instance creation/object creation ex =Song type=new Song;
 Garbage Collection in java when ref is not pointing to any memory java (JVM) will automatically clear or recliams that memory
-FQN=Fully Qualified Name is path+classname
+FQN=Fully Qualified Name is path+classname 
 
 constructors are mainly used to initialise instance variable during instance creation
 4 ways to initialise constructor =literals(default),reference(to update),constructor and methods
-instance means copy
+instance means copy			
 constructor can be executed in stack
 this. is a keyword used when instance variable names and local variable names are same
 this. keyword used in variable,methods,constructor
@@ -120,3 +120,10 @@ class variables=static
 any example we say is class,datatype,nonprimitive,object
 F6 to execute one by one
 F8 to close n come out
+shortcut to declare and initialise constructor alr+shift+s+o
+
+Association in java is a connection or relation between two separate classes that are set up through their objects
+relations are two types :: 1.inheritance(IS-A which is used for related things ex:Jagadeesh is good man) 
+2.Association(HAS-A which is used for unrelated things ex: jagadeesh has a iphone)
+
+
