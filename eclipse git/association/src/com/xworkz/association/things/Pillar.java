@@ -1,6 +1,5 @@
 package com.xworkz.association.things;
 
-
 import com.xworkz.association.constants.Shape;
 
 public class Pillar {
@@ -9,9 +8,7 @@ public class Pillar {
 	public Shape shape = Shape.CYLINDRICAL;
 	public double height;
 	public String supporting;
-	public Company company;
-
-	
+	public Company company= new Company("L&T", "MultiType&MNC");;
 
 	public Pillar(int id, String place, Shape shape, double height, String supporting) {
 		super();
@@ -22,16 +19,21 @@ public class Pillar {
 		this.supporting = supporting;
 	}
 
-
-
 	public void showThings() {
+
 		System.out.println(this.id);
 		System.out.println(this.place);
 		System.out.println(this.shape);
 		System.out.println(this.height);
 		System.out.println(this.supporting);
-		Company compnay = new Company("L&T", "MultiType&MNC");
-		compnay.showOff();
+		 
+		if (this.company != null) {
+			
+         this.company.showOff();
+		} 
+		else {
+			System.out.println("company is null");
+		}
 	}
 
 }
