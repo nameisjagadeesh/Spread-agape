@@ -14,11 +14,11 @@ public class President {
 		this.name = name;
 	}
 
-	public void setGender(Gender gender) {
+	public void setGender(Gender gender) { //this is method initialisation
 		this.gender = gender;
 	}
 
-	public void setTotalVotes(long totalVotes) {
+	public void setTotalVotes(long totalVotes) {//this is method initialisation
 		this.totalVotes = totalVotes;
 	}
 
@@ -26,7 +26,12 @@ public class President {
 		System.out.println(this.name);
 		System.out.println(this.tenure);
 		System.out.println(this.totalVotes);
+		if(this.gender!=null) { //this to check null point exeptioner
 		System.out.println(this.gender);
+		}
+		else {
+			System.out.println("the gender is null");
+		}
 	}
 
 }

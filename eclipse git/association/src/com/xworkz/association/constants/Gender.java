@@ -6,7 +6,7 @@ public enum Gender {
 
 	public String sexName;
 	
-	private Gender(String sexName) {
+	private Gender(String sexName) { //this is to declare string within the enum
 		this.sexName = sexName;
 	}
 	

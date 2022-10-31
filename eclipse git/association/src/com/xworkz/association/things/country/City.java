@@ -1,5 +1,6 @@
 package com.xworkz.association.things.country;
 //this code is on association which relates one to one variable and one to many variables (array)
+
 public class City {
 	public name nameIs;
 	public double areaInSqKm;
@@ -10,16 +11,16 @@ public class City {
 		this.nameIs = nameIs;
 	}
 
-	public void setAreaInSqKm(double areaInSqKm) {
+	public void setAreaInSqKm(double areaInSqKm) {//this is method initialisation
 		this.areaInSqKm = areaInSqKm;
 	}
 
-	public void setCapital(boolean capital) {
+	public void setCapital(boolean capital) {//this is method initialisation
 		this.capital = capital;
 	}
 
 	public void showOff() {
-		if (this.nameIs != null) {
+		if (this.nameIs != null) { //this to check null point exeptioner
 			System.out.println(this.nameIs);
 			this.nameIs.showOff();
 		} 
