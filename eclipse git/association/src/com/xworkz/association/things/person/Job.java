@@ -13,7 +13,7 @@ public class Job {
 		this.bond = bond;
 	}
 
-	public void setCompany(Company company) {
+	public void setCompany(Company company) {//method initalisation
 		this.company = company;
 	}
 

@@ -5,13 +5,13 @@ public class Company {
 	public String ownerName;
 	public Location location;
 
-	public Company(String name, String ownerName) {
+	public Company(String name, String ownerName) {//method initalisation
 		super();
 		this.name = name;
 		this.ownerName = ownerName;
 	}
 
-	public void setLocation(Location location) {
+	public void setLocation(Location location) {//method initalisation
 		this.location = location;
 	}
 

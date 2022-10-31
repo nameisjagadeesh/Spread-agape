@@ -14,7 +14,7 @@ public class Location {
 
 	}
 
-	public void setCity(MetroCity city, State state, Nation nation) {
+	public void setCity(MetroCity city, State state, Nation nation) {//method initalisation
 		this.city = city;
 		this.state = state;
 		this.nation = nation;

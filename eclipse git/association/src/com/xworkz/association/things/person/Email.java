@@ -13,7 +13,7 @@ public class Email {
 		this.mobileNo = mobileNo;
 	}
 
-	public void setCompany(Company company) {
+	public void setCompany(Company company) {//method initalisation
 		this.company = company;
 	}
 

@@ -5,15 +5,15 @@ public class Person {
 	public Email[] emails;
 	public Job job;
 
-	public Person(String name) {
+	public Person(String name) {//constrctor initalisation
 		this.name = name;
 	}
 
-	public void setEmails(Email[] emails) {
+	public void setEmails(Email[] emails) {//method initalisation
 		this.emails = emails;
 	}
 
-	public void setJob(Job job) {
+	public void setJob(Job job) {//method initalisation
 		this.job = job;
 	}
 
@@ -22,7 +22,7 @@ public class Person {
 		if (this.emails != null) {
 			for (int i = 0; i < emails.length; i++) {
 				Email element = this.emails[i];
-				// System.out.println(element);
+				
 				if (element != null) {
 					element.show();
 				} else {
