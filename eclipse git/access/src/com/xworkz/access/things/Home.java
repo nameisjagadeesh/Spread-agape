@@ -1,24 +1,23 @@
 package com.xworkz.access.things;
 
-
-
 public class Home {
-	public String name="bapuji";
-    public Town town=new Town();
-    public void live() {
-    System.out.println(this.name);
-		if(this.town!=null) {
+	public String name = "bapuji";
+	public Town town = new Town();
+
+	public void live() {
+		System.out.println(this.name);
+		if (this.town != null) {
 			System.out.println(town.getCity());
 			town.setCity("dabasaphete");
-			System.out.println("updated city is"+town.getCity());
-			
+			System.out.println("updated city is" + town.getCity());
+
 			System.out.println(town.getName());
 			town.setName("kings landing");
-			System.out.println("updated name is"+town.getName());
-			
+			System.out.println("updated name is" + town.getName());
+
 			System.out.println(town.getPopulation());
 			town.setPopulation(65412L);
-			System.out.println("updated total towns are"+ town.getPopulation());
+			System.out.println("updated total towns are" + town.getPopulation());
 
 			System.out.println(town.getType());
 			town.setType("residential");
@@ -51,10 +50,9 @@ public class Home {
 			System.out.println(town.getHouses());
 			town.setHouses(3365);
 			System.out.println("updated house is" + town.getHouses());
-		}
-		else {
+		} else {
 			System.out.println("town is null");
 		}
-    }
+	}
 
 }
