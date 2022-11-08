@@ -19,7 +19,7 @@ public class JailRunner {
 		Jail jail2=new WomensJail();
 		System.out.println(jail2.location);
 		System.out.println(jail2.name);
-		WomensJail jail3=(WomensJail) jail2;
+		WomensJail jail3 = (WomensJail) jail2;
 		System.out.println(jail3.jailCode);
 		System.out.println(jail3.womenNames);
 		System.out.println("~~~~~~~~~~~~~");
