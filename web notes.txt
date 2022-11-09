@@ -1,0 +1,11 @@
+Web technlogy
+html is for structure
+css(cascading style sheets) is for styling
+javascript is for behaviour
+HTML elements can be nested (this means that elements can contain other elements).
+
+
+css syntax=selector{property:value} selector is who ,property is what ,value is how
+           ex=h1{color:red}
+types of css =inline,internal and external		   
+		   

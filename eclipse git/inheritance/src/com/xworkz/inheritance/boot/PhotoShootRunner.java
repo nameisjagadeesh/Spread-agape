@@ -7,11 +7,11 @@ import com.xworkz.inheritance.things.childclass.WildPhotoShoot;
 public class PhotoShootRunner {
 
 	public static void main(String[] args) {
-		PhotoShooting photoShooting=new PhotoShooting("wedding", "mysuru", CameraType.INSTACAMERA);
+		PhotoShooting photoShooting = new PhotoShooting("wedding", "mysuru", CameraType.INSTACAMERA);
 		photoShooting.details();
 		System.out.println("~~~~~~~~~~~~~~");
-		
-		WildPhotoShoot wildPhotoShoot=new WildPhotoShoot("wildnature", "Bandipura", CameraType.NIKON,6365);
+
+		WildPhotoShoot wildPhotoShoot = new WildPhotoShoot("wildnature", "Bandipura", CameraType.NIKON, 6365);
 		wildPhotoShoot.clicPhotos();
 	}
 

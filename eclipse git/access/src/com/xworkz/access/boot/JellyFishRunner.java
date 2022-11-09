@@ -12,6 +12,7 @@ public class JellyFishRunner {
 
 		jellyFish.swim(); // invoking the method
 		System.out.println(fish.getName()); // allowing runner file to only access but not to modify
+		
 	}
 
 }

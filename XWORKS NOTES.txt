@@ -13,6 +13,7 @@ JVM:JAVA VIRTUAL MACHINE>RUNS N EXCECUTE THE PROGRAM
 JRE CONSIST OF JVM
 JAVA IS WIDELY USED PROGRAMMING LANGUAGE FOR CODING WEB APPLICATION
 JAVAC COMPILES PROGRAM LANGUAGE INTO CLASS FILES THAT RUN ON THE JVM ,JAVAC USES JRE
+features of java =simple,robust,platform independent,portability,java is WORA
 
 platform is combinatiom of software n hardesware ex;ios n hardeware
 java is platform independent
@@ -25,26 +26,26 @@ Datatype is a set of values and set of operations defined on those values
 Variables are containers which stores the values
 
 jAVA IS OBJECT ORIENTED PROGRAMMING LANGUAGE,JAVA REPRESENTS REAL WORLD
-OBJECT HAS STATES(DATA) AND BEHAVIOUR(ACTION)
+OBJECT/class/things HAS STATES(DATA) AND BEHAVIOUR(ACTION)
 jvm look for main method to execute
-PUBLIC STATIC VOID MAIN(STRING[] ARG)
+PUBLIC STATIC VOID MAIN(STRING[] ARG) =main method
 
 main method is first method to start program
 MEMORY RAM, HEAP MEMORY, META SPACE
 HEAP TO EXECUTE JAVA PRO
-CLASS LOADER IS A CLASS WHICH LOADS INFO OF CLASSES INTO META SPACE ,JVM USES CLASS LOADER
+CLASS LOADER IS A CLASS/object WHICH LOADS INFO OF CLASSES INTO META SPACE ,JVM USES CLASS LOADER
 META SPACE IS TO LOAD CLASS INFO
 STACK TO EXECUTE METHODS ,it will look for perticular mathod
 CONSTANT POOL TO SToRE PREMITIVE
 INSTANCE MEMORY TO STORE NON PREMITIVE
-system.out.println(statement)> system:is class,. is operator,out: static variable ,statement is args , println is static method , S should b in caps
+system.out.println(statement)> system:is class,. is a dot operator,out: static variable ,statement is args , println is static method , S should b in caps
 output in java is information
 use of writing program is to represent objec ,
 data=is variable.> ways/types=static,instance,loacal,parameter ,data is use to store data
-declaring a variable=datatype refname(value)
+declaring a variable=datatype refname(value)ex: Pizza pizza;
 initialise a variable=by adding ;(semicolon which means end of statemnet)
 datatype in java are 2 types =premitive n non premitive, premitive is to denote values, non primitive to compex value
-tyepes of primitive parameter(java dataypes)=byte ,short ,int , long ,float ,double, boolean, char
+types of primitive parameter(java dataypes)=byte ,short ,int , long ,float ,double, boolean, char
 
 non primitive =any class we write is non premitive ,types=countless
 any class will  have state and behaviour
@@ -83,6 +84,7 @@ local variable is declared within body only(inside),it can be initialised before
 argument is a reference passed to method()
 
 polymarphism is using same word in java to mean different things in differentcontext or (same thing but in different form)
+2 types of polymarphism =compile time (overloading) and run time (overridding)
 types of polymarphism=overloading-which is of same method but different in parameter ,overloading is a compile time polymarphism
 variable can be initialised in 4 ways==literals,constructor,methods,class(or reference)
 
@@ -95,13 +97,14 @@ import of package
 copy : static has one copy n nonstatic has many copies
 constructor is a special mathod ,it is same as class name ex:Bike() or Bike();  
 constructor has no return type
+constructor used with new key word
 compiler will provides no-argument constructor
 public Gold(){} is constructor type
 public void Gold(){} is method type -instance method
 instantiation is initiating the non primitive,it is making copies in instance memory
 initialisation for primitive instance variables,instance creates many copies
 
-New is a keyword which allocates the memory in instance
+New is a keyword which allocates the memory in instance and it used to create an object
 instance creation/object creation ex =Song type=new Song;
 Garbage Collection in java when ref is not pointing to any memory java (JVM) will automatically clear or recliams that memory
 FQN=Fully Qualified Name is path+classname 
@@ -109,7 +112,7 @@ FQN=Fully Qualified Name is path+classname
 constructors are mainly used to initialise instance variable during instance creation
 4 ways to initialise constructor =literals(default),reference(to update),constructor and methods
 instance means copy			
-constructor can be executed in stack
+constructor can be executed in stack ,constructor is not a member
 this. is a keyword used when instance variable names and local variable names are same
 this. keyword used in variable,methods,constructor
 c programing language was developed by Dennis Richie
@@ -120,10 +123,44 @@ class variables=static
 any example we say is class,datatype,nonprimitive,object
 F6 to execute one by one
 F8 to close n come out
-shortcut to declare and initialise constructor alr+shift+s+o
+shortcut to declare and initialise constructor alr+shift+s+o/source in eclipse
+Enum is a special class or datatype that represent a group of constants (which are unchangable variables like final variable)
 
 Association in java is a connection or relation between two separate classes that are set up through their objects
 relations are two types :: 1.inheritance(IS-A which is used for related things ex:Jagadeesh is good man) 
 2.Association(HAS-A which is used for unrelated things ex: jagadeesh has a iphone)
+null point exeptioner=when reference is not pointing to any memory and we try to access that variable
+static can be accessed using the class name and reference but instance is accessed only by reference
+
+Access specifier control who can access and modify, it is  used at class , constructor, properties,method
+4 access specifier: private (only inner class), protected(only inner class), default(only within same package ),  public(class , constructor, properties,method ,where it allows other classes from different package to access)
+Magical package: these are default packages which dont need import , jre automatically imports
+
+ENCAPSULATION:: restricting direct access of properties and providing access using method
+
+Class is a blueprint/or templet it contains variables and datatype
+class loader is an object responible for loading the class ,it is a abstraction class
+dot operater(.)is used to access thr instance variable and methods of class objects
+for loop  =4 condition: initialization , condition check, checks if it is true and enter the loops and finally increament or decreament.
+  
+
+Inheritance means one class aquiring members(properties and methods) of another class
+Inheritance ( extends keyword)
+Parent ( has members).  Child ( is a class) Inheritance doesn’t need references
+inheritance types =single,multilevel and heirarchial
+in java multiple and hybrid inheritance is not possible ,for this we need interface
+inheritance use is to overridding and re-usability(to avoid duplicate)  and to achieve polymarphism
+Invisible parent is object and object is a superclass and object is in magical package  
+any class we write is a part of object which is polymorphic in nameture(diff form)
+casting=converting the parent reference to sub ckass(child class) only when parent ref is pointing to childclass ex:childclass name ref=(childclass name) parentclass ref
+constructors are not inherited bcz they used to just initialisation of instance variable
+java doesn’t support multiple inheritance by class but supports from interface
+static members are not inherited
+
+Class and parents terminologies 
+childclass/subclass/derivedclass
+Parent/superclass/baseclass
+
+
 
 
