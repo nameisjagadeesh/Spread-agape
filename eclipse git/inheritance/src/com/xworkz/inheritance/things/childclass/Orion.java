@@ -14,7 +14,7 @@ public class Orion extends Mall {
 		this.owner=owner;
 	}
 	public void shopping() {
-		super.shopping();
+		super.shopping();//this to overriding
 		System.out.println(this.owner);
 	}
 	

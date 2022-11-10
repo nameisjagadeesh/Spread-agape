@@ -7,5 +7,14 @@ HTML elements can be nested (this means that elements can contain other elements
 
 css syntax=selector{property:value} selector is who ,property is what ,value is how
            ex=h1{color:red}
-types of css =inline,internal and external		   
+types of css =inline,internal and external.
+css positioning 
+css display property has 4 types=block,inline,inlineblock,none
+div tag to seperate contents in different boxes
+position=static,relative( addidng margin relative to its positioning left or right),absolute(positioning relative to the parent(entire body of webpage) div) and fixed position
+font family to add various fonts
+
+
+		   
+
 		   

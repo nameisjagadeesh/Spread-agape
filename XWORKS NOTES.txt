@@ -161,6 +161,27 @@ Class and parents terminologies
 childclass/subclass/derivedclass
 Parent/superclass/baseclass
 
+variable is a ref to address and it stores the value.
+jvm decides which method to executes at run time(from parent or child) this is called as run time polymarphism
+run time polymarphism achieved by overridding
+overridding is compile time bcz compiler will check the errors during the method overridding(@overridding)
+@(annotation) was introduced during java 1.5version ,it will check compile time errors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
