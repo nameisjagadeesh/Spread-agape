@@ -109,7 +109,10 @@ instance creation/object creation ex =Song type=new Song;
 Garbage Collection in java when ref is not pointing to any memory java (JVM) will automatically clear or recliams that memory
 FQN=Fully Qualified Name is path+classname 
 
-constructors are mainly used to initialise instance variable during instance creation
+constructors are mainly used to initialise instance variable during instance creation ,Constructor gets called at the time of object creation.
+types of constructor:1.default constructor(When user don’t define any constructor, compiler provides a default constructor.)
+The access modifier of default constructor is same as that of the class.
+2.custom constructor:User defined constructor is also known as custom constructor.The access modifier of custom constructor can be either public or protected or default or Private.
 4 ways to initialise constructor =literals(default),reference(to update),constructor and methods
 instance means copy			
 constructor can be executed in stack ,constructor is not a member
