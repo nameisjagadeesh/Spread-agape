@@ -116,10 +116,14 @@ The access modifier of default constructor is same as that of the class.
 4 ways to initialise constructor =literals(default),reference(to update),constructor and methods
 instance means copy			
 constructor can be executed in stack ,constructor is not a member
+if the constructors are marked as static, they can not be called from the child class;
 this. is a keyword used when instance variable names and local variable names are same
 this. keyword used in variable,methods,constructor
 c programing language was developed by Dennis Richie
 constructor chaining=when one constructor calls another constructor 
+A copy constructor in a Java class is a constructor that creates an object using another object of the same Java class.
+ex of copy constructor= constructor1{}        constructor2(){constructor1}
+
 types of chaining=super(default/implicit::when calling from parent class) and this(calling from same class)
 class level variable=static and non static
 class variables=static 
@@ -155,7 +159,8 @@ in java multiple and hybrid inheritance is not possible ,for this we need interf
 inheritance use is to overridding and re-usability(to avoid duplicate)  and to achieve polymarphism
 Invisible parent is object and object is a superclass and object is in magical package  
 any class we write is a part of object which is polymorphic in nameture(diff form)
-casting=converting the parent reference to sub ckass(child class) only when parent ref is pointing to childclass ex:childclass name ref=(childclass name) parentclass ref
+casting=converting the parent reference to sub ckass(child class) only when parent ref is pointing to childclass ex:childclass name ref=(childclass name) parentclass ref OR "Creating an object of sub class and referring it by super class reference variable is called"
+upcasting.
 constructors are not inherited bcz they used to just initialisation of instance variable
 java doesn’t support multiple inheritance by class but supports from interface
 static members are not inherited

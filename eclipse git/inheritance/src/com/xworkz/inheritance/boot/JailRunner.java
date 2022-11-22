@@ -5,6 +5,9 @@ import com.xworkz.inheritance.things.childclass.CentralJail;
 import com.xworkz.inheritance.things.childclass.SubJail;
 import com.xworkz.inheritance.things.childclass.WomensJail;
 
+//Creating an object of sub class and referring it by super class reference variable is called
+//upcasting.
+
 public class JailRunner {
 
 	public static void main(String[] args) {
@@ -19,7 +22,7 @@ public class JailRunner {
 		Jail jail2=new WomensJail();
 		System.out.println(jail2.location);
 		System.out.println(jail2.name);
-		WomensJail jail3 = (WomensJail) jail2;
+		WomensJail jail3 = (WomensJail) jail2; //this is casting
 		System.out.println(jail3.jailCode);
 		System.out.println(jail3.womenNames);
 		System.out.println("~~~~~~~~~~~~~");
