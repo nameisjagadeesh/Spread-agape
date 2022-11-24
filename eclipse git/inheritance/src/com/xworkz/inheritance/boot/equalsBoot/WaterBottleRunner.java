@@ -19,6 +19,8 @@ public class WaterBottleRunner {
 		
 		WaterBottel bottel2 = new WaterBottel("energydrink", 56.3, 'h', 20, false, "bisleri", 40, "abc", 30);
 		System.out.println(bottel2);
+		System.out.println(bottel2.hashCode());
+		System.out.println(System.identityHashCode(bottel2)); //this is default hashcode
 		boolean ref=bottel.equals(bottel2);
 		System.out.println(ref);
 		

@@ -11,6 +11,10 @@ JDK:JAVA DEVELOPMENT KIT>WRITING PROGRAM>JAVA TO RUN PROGRAM;JAVAC TO CONVERT EN
 JRE:JAVA RUNTIME ENV>RUN PROGRAM , JRE HAS JVM
 JVM:JAVA VIRTUAL MACHINE>RUNS N EXCECUTE THE PROGRAM
 JRE CONSIST OF JVM
+JDK is basically a software development environment which is used to develop applications and applets.  jdk has tools and bins
+Jre is a set of software tools which provides the run time environment , it contains set of liberaries
+JRE is implementation of JVM.
+
 JAVA IS WIDELY USED PROGRAMMING LANGUAGE FOR CODING WEB APPLICATION
 JAVAC COMPILES PROGRAM LANGUAGE INTO CLASS FILES THAT RUN ON THE JVM ,JAVAC USES JRE
 features of java =simple,robust,platform independent,portability,java is WORA
@@ -56,6 +60,7 @@ if two ref pointing to same memory we have to use "doble equals operater(==)" ,i
 
 variable can never hold value it will only ref to adress
 Scopes{}=using the data in a boundary ,ex;voter id scope is ward ,DL-nation with bigger scope passport;worldwide
+wrapper classes=Object representation of primitive data type is called wrapper class.
 
 reference is pointing to adress
 variable is something which changes
@@ -142,6 +147,8 @@ static can be accessed using the class name and reference but instance is access
 Access specifier control who can access and modify, it is  used at class , constructor, properties,method
 4 access specifier: private (only inner class), protected(only inner class), default(only within same package ),  public(class , constructor, properties,method ,where it allows other classes from different package to access)
 Magical package: these are default packages which dont need import , jre automatically imports
+Access specifier provides the visibility 
+
 
 ENCAPSULATION:: restricting direct access of properties and providing access using method
 
@@ -174,6 +181,27 @@ jvm decides which method to executes at run time(from parent or child) this is c
 run time polymarphism achieved by overridding
 overridding is compile time bcz compiler will check the errors during the method overridding(@overridding)
 @(annotation) was introduced during java 1.5version ,it will check compile time errors.
+
+
+Method :
+What is a method ?
+Ans :
+→ A method is a set of instructions/statements or block of code which performs a specific task.
+→ Method can return either primitive data or non primitive data.
+→ Method can't return multiple primitive data types (eg : method can't return both int
+and String at the same time).
+→ But, It can return collection of homogeneous data type. ( eg : int[] array or String[]
+array etc..)
+
+When we use protected keyword we can initiate and create instance within same package but not possible to creat instance in different package, in different package it will be accessed by only inheritance but not accessed by reference 
+2 ways to access constructor: by new keyword and by super chaining
+Pointer is a kind of variable which points to memory of an address they are not used in java bcz they are unsecured 
+
+We can’t override the static method bcz method overrridding is dynamic during run time and static methods are binded at compile time  but static methods can be inherited
+final keyword used with class ,variable and method
+By using final keyword at class level we can stop inheritance and cant be extended 
+When we use make method as final we can inherit the method but can’t be overridden 
+Out of 11 methods of object only 9 methods are accessed using reference
 
 
 
