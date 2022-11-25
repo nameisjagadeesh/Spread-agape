@@ -14,6 +14,15 @@ div tag to seperate contents in different boxes
 position=static,relative( addidng margin relative to its positioning left or right),absolute(positioning relative to the parent(entire body of webpage) div) and fixed position
 font family to add various fonts
 
+ Bootstrap is a free front-end framework for faster and easier web development. Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins.
+ bootstrap use to create a responsive webpage
+ Responsive web design is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops.
+ 
+ 
+
+
+
+
 
 		   
 
