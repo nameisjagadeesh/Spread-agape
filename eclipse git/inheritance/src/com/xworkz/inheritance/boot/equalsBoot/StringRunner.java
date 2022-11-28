@@ -58,7 +58,10 @@ public class StringRunner {
 		System.out.println("~~~~~~~~~~~~~~");
 
 		byte[] b = concated.getBytes(); // string method 13
-		System.out.println(b);
+		for(int i=0; i<b.length;i++) {
+			System.out.println("getting bytes"+b[i]);
+		}
+		
 		System.out.println("~~~~~~~~~~~~~~");
 
 		int c = concated.hashCode(); // string method 14
