@@ -1,9 +1,11 @@
 package com.xworkz.rules.boot;
 
 import com.xworkz.rules.bridge.DevelopementInstitute;
+import com.xworkz.rules.bridge.GroupsRules;
 import com.xworkz.rules.bridge.Institute;
 import com.xworkz.rules.bridge.TestingInstitute;
 import com.xworkz.rules.bridge.Xworks;
+import com.xworkz.rules.followers.GroupedPeoples;
 import com.xworkz.rules.followers.SoftwareInstitute;
 
 public class InstituteRunner {
@@ -50,6 +52,26 @@ public class InstituteRunner {
 		xworks.tasks();
 		xworks.training();
 		xworks.trainingPeriod();
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+
+		GroupsRules groupsRules = new SoftwareInstitute();
+		groupsRules.attendence();
+		groupsRules.discipline();
+		groupsRules.outings();
+		groupsRules.plays();
+		groupsRules.sports();
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+		
+		GroupsRules groupsRules2=new GroupedPeoples();
+		groupsRules2.attendence();
+		groupsRules2.discipline();
+		groupsRules2.outings();
+		groupsRules2.plays();
+		groupsRules2.sports();
+		
+		
 
 	}
 
