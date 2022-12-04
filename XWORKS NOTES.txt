@@ -203,6 +203,33 @@ By using final keyword at class level we can stop inheritance and cant be extend
 When we use make method as final we can inherit the method but can’t be overridden 
 Out of 11 methods of object only 9 methods are accessed using reference
 
+Hashcode used internally for hashing algorithms 
+Equals method compare data of 2 objects(for primitive) and == for primitive and non primitive data type 
+
+String is immutable bcz it cant be inherited and modified (final)
+2 ways to create string = littereal and with new keyword 
+String has 65+11= 76 methods by default 
+Internally string is represented as char[]
+Constant pool never duplicates and instance memory can duplicate ( as we used with new keyword)
+
+Interface bridge between 2 ststem(class) or rules allows two classes interact 
+Interface is a keyword,non primitive datatype,cant declare constructor, cant create instances,declared as public (abstract,static,default)method, class only provides for implementation,it doesn’t support concrete methods(non static and non abstract),variables as public static final , it supports multiple inheritance 
+Interface is 100% abstract and class is not 100% abstract(bcz class has both abstract and complete methods), class has methods with implementation but abstraction has no
+Class has both abstract and concrete methods .
+Interface is always public 
+Interface used to achieve abstraction 
+Class can implement n no of Interface but extend only one class
+Instance creation is not possible for abstract class ,but  abstract class has default constructor
+Abstraction class is completed using subclass 
+Interface is also a incomplete abd it is completed using implementation 
+abstract class has default constructor but cant be used with new keyword ,only purpose is to chaining 
+Parametrised constructor is mandatory in abstract class only when parent class has no default constructor 
+One Interface extends another Interface or n no of interface
+Marker Interface :it with no abstract methods
+Java is pure objective oriented but it depends on developer how he uses it 
+Ex: private int no; Or private Integere no;       We can use both things
+
+
 
 
 
