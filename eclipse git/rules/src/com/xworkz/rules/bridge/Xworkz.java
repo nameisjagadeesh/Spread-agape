@@ -9,6 +9,8 @@ public interface Xworkz {
 
 	boolean placements(int totalPlacemts);
 
-	boolean tasks(String names);
+	boolean uploadedTasks(String names);
+	
+	boolean completedProgram();
 
 }

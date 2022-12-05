@@ -1,6 +1,6 @@
 package com.xworkz.inheritance.boot.equalsBoot;
 
-public class StringMethodsRunner {
+public  class StringMethodsRunner {
 
 	public static void main(String[] args) {
 		String movie = "Triple Riding is a Kannada movie released on 25 Nov, 2022. The movie is directed by Mahesh Gowda and featured Aditi Prabhudeva, Rachana Inder, Sadhu Kokila and Rangayana Raghu as lead characters";

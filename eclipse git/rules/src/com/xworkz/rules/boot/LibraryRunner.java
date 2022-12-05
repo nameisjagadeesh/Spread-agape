@@ -15,5 +15,9 @@ public class LibraryRunner {
 		LibraryManagement management2 = new LibraryManagement(libraryRules);
 		management2.readCheck();
 	}
+	
+	public  void print() {
+		
+	}
 
 }

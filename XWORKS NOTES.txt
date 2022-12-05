@@ -143,6 +143,7 @@ relations are two types :: 1.inheritance(IS-A which is used for related things e
 2.Association(HAS-A which is used for unrelated things ex: jagadeesh has a iphone)
 null point exeptioner=when reference is not pointing to any memory and we try to access that variable
 static can be accessed using the class name and reference but instance is accessed only by reference
+Association types = composition:strong (where sub class cant exist without parent class  ex:fish and water) Aggregation :weak(where sub class can exist without parent class ex)
 
 Access specifier control who can access and modify, it is  used at class , constructor, properties,method
 4 access specifier: private (only inner class), protected(only inner class), default(only within same package ),  public(class , constructor, properties,method ,where it allows other classes from different package to access)
@@ -228,6 +229,30 @@ One Interface extends another Interface or n no of interface
 Marker Interface :it with no abstract methods
 Java is pure objective oriented but it depends on developer how he uses it 
 Ex: private int no; Or private Integere no;       We can use both things
+
+EXCEPTIONAL EVENTS (Exception’s)
+Events which stop the normal execution are called exceptional events 
+Types : fix with change and fix without change
+Throwable is parent most type to represent the exceptional issues
+Throwable types : error and exception  both represents the exceptional events of class 
+Error: system issue, memory issues , errors cant be recovered 
+Exceptions : isssues in our program, data issues
+Run time exceptions : logic issue
+Throwable is not used bcz we cant distinguished between errors and exception
+Throw keyword is used to create the exceptional event (throw new RuntimeException();)
+
+Keywords in java are something that has got a special meaning.
+A variable is something that holds a value in the memory.
+Static variables are also known as class variables.static means one single copy in the memory.
+Static variables can be directly accessed from both static area and instance area.The scope of static variable is same as the scope of the class.
+If we want common data to be shared across multiple objects, then we declare these data members as static variables.
+Explain System.out.println(); =It is used to print a custom value on the console.Here, System is a predefined class in java.
+‘out is a static object reference variable in System class,Println() is one of the non static method of PrintStream class which is actually responsible to print any custom value on the console.
+
+array=Can store only homogenous data.Arrays are fixed, that is, when we declare an array, we must define the size.We can store duplicate values.We can also store null values.We can store both the address of an object and the actual object itself.
+ 
+
+
 
 
 
