@@ -1,6 +1,6 @@
 X-WORKZ CLASS NOTES 24/08/22
 JAVA IS DEVELOPED BY JAMES GOSLING
-java is high level object oriented programing language
+java is high level object oriented programing language.
 object oriented means a way to develop softeware
 language is a means of communication
 programming language is any language that is executed on computer system 
@@ -13,7 +13,7 @@ JVM:JAVA VIRTUAL MACHINE>RUNS N EXCECUTE THE PROGRAM
 JRE CONSIST OF JVM
 JDK is basically a software development environment which is used to develop applications and applets.  jdk has tools and bins
 Jre is a set of software tools which provides the run time environment , it contains set of liberaries
-JRE is implementation of JVM.
+JRE is physical implementation of JVM as It provides a platform to execute java programs. jvm is responible for converting byte code into system specific instruction
 
 JAVA IS WIDELY USED PROGRAMMING LANGUAGE FOR CODING WEB APPLICATION
 JAVAC COMPILES PROGRAM LANGUAGE INTO CLASS FILES THAT RUN ON THE JVM ,JAVAC USES JRE
@@ -26,13 +26,13 @@ byte code is a special format which is understood by only JVM,CLASS=BYTE CODE
 javac generates bytecode
 developers writes source code
 PLATFORM INDEPENDENT, IS JAVA COMPILED CODE (BYTE CODE) CAN RUN ON ALL OS
-Datatype is a set of values and set of operations defined on those values
-Variables are containers which stores the values
+Datatype is a set of values and set of operations defined on those values .It defines what type of data and the size of data that is stored in a variable.
+Variables are containers which stores the values.
 
-jAVA IS OBJECT ORIENTED PROGRAMMING LANGUAGE,JAVA REPRESENTS REAL WORLD
+JAVA IS OBJECT ORIENTED PROGRAMMING LANGUAGE,JAVA REPRESENTS REAL WORLD
 OBJECT/class/things HAS STATES(DATA) AND BEHAVIOUR(ACTION)
 jvm look for main method to execute
-PUBLIC STATIC VOID MAIN(STRING[] ARG) =main method
+PUBLIC STATIC VOID MAIN(STRING[] ARG) =main method  =public is access specifier which is direct access to the jvm,static means direct access to the jvm without creating the object ,void is a return type and main is the name of the method which is searched by the jvm it is the method where the main execution occurs .String [] args is the parameter passed to the main method
 
 main method is first method to start program
 MEMORY RAM, HEAP MEMORY, META SPACE
@@ -43,6 +43,7 @@ STACK TO EXECUTE METHODS ,it will look for perticular mathod
 CONSTANT POOL TO SToRE PREMITIVE
 INSTANCE MEMORY TO STORE NON PREMITIVE
 system.out.println(statement)> system:is class,. is a dot operator,out: static variable ,statement is args , println is static method , S should b in caps
+
 output in java is information
 use of writing program is to represent objec ,
 data=is variable.> ways/types=static,instance,loacal,parameter ,data is use to store data
@@ -239,7 +240,7 @@ Error: system issue, memory issues , errors cant be recovered
 Exceptions : isssues in our program, data issues
 Run time exceptions : logic issue
 Throwable is not used bcz we cant distinguished between errors and exception
-Throw keyword is used to create the exceptional event (throw new RuntimeException();)
+Throw keyword is used to declare the exceptional event (throw new RuntimeException();)
 
 Keywords in java are something that has got a special meaning.
 A variable is something that holds a value in the memory.
@@ -250,6 +251,50 @@ Explain System.out.println(); =It is used to print a custom value on the console
 ‘out is a static object reference variable in System class,Println() is one of the non static method of PrintStream class which is actually responsible to print any custom value on the console.
 
 array=Can store only homogenous data.Arrays are fixed, that is, when we declare an array, we must define the size.We can store duplicate values.We can also store null values.We can store both the address of an object and the actual object itself.
+
+The process of automatic conversion of non primitive data type in to its corresponding primitive type by the compiler is called unboxing.
+The process of automatic conversion of primitive data type in to its corresponding non primitive data type by the compiler is called autoboxing.
+
+singleton class=is a class whose only one instance can be created at any given time in one jvm .a class can be made singleton by making its constructor private
+
+EXCEPTIONAL EVENTS (Exception’s)
+Events which stop the normal execution are called exceptional events 
+Types : fix with change and fix without change
+Throwable is parent most type to represent the exceptional issues
+Throwable types : error and exception  both represents the exceptional events of class 
+Error: system issue, memory issues , errors cant be recovered 
+Exceptions : isssues in our program, data issues
+Run time exceptions : logic issue
+Throwable is not used bcz we cant distinguished 
+Throw keyword is used to create the exceptional event (throw new RuntimeException();)
+Stack trace 
+Throw will declare the exceptional event
+Exceptional handlers: throws and tryblock
+Error is an event and compilation error is a syntax problem
+Compile time exception /checked exception: compiler is forcing u to handle issue
+Run time exception/unchecked : compiler will not force u to handle issue
+Jvm will create the exceptional 
+Throws will delegate the exceptional claller of the method to handle the event
+Compiler will uncheck event if it is sub class of RuntimeException 
+Delegate means force creator to handle the method 
+When we delegate to handle exception , use only sub class handlers , dont use parent type exception, throwable,error
+Jvm tries to trace for the handler
+Try block Handling the issue will make exceptions continue  ,try will help to come out of the exception and catch will handle it and continue the exception
+types of tryblocks syntaxs;
+1.try with resource                        try(){}
+2.try(autoclosable)   
+3.try with catch block                    try{} catch(type){} catch(type1){}
+4.try with multiple catch block
+5.try with finally block                  try{}  finally{}
+6.try with catch and finally block        try{} catch(type){} finally{}
+7.try with multi catch blocks             try{} catch(type|type1){}
+8.try with multi catch blocks and finally block   
+
+in eclipse while creating new project we use classes/standards(folder name) instead of bin, bcz bin is for a windows standard ,but classes used to store the byte bytecode  
+
+without initialisation local variable cant be used
+A class is a group of objects which have common properties. It is a template or blueprint from which objects are created. It is a logical entity. It can't be physical.
+ 
  
 
 
