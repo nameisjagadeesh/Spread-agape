@@ -15,13 +15,13 @@ public class GmailRepositoryImpli implements GmailRepository {
 		}
 		this.gmails[gmailIndex] = gmail;
 		this.gmailIndex++;
-		return false;
+		return true;
 	}
 
 	@Override
 	public int totalGmails() {
 		System.out.println("running totalGmails");
-		return GmailRepository.super.totalGmails();
+		return this.gmailIndex;
 
 	}
 

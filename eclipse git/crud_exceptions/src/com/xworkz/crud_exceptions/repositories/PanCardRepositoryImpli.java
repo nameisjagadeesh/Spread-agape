@@ -9,7 +9,7 @@ public class PanCardRepositoryImpli implements PanCardRepository {
 	@Override
 	public boolean linking(String card) {
 		System.out.println("running the linking");
-		if (this.panCardIndex > panCards.length) {
+		if (this.panCardIndex >= panCards.length) {
 			throw new PanSizeExceededException();
 		}
 		this.panCards[panCardIndex] = card;
@@ -17,8 +17,10 @@ public class PanCardRepositoryImpli implements PanCardRepository {
 		return false;
 	}
 
+	@Override
 	public int total() {
-		return PanCardRepository.super.total();
+		System.out.println("running the total");
+		return this.panCardIndex;
 
 	}
 

@@ -21,7 +21,7 @@ public class SweetNameRepositoryImpli implements SweetNameRepository {
 	@Override
 	public int totalSweets() {
 		System.out.println("running totalGmails");
-		return SweetNameRepository.super.totalSweets();
+		return this.sweetIndex;
 
 	}
 

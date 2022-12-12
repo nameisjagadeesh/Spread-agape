@@ -6,7 +6,7 @@ public interface PanCardRepository {
 
 	default int total() {
 		System.out.println("running total");
-		return 10;
+		return 0;
 
 	}
 
