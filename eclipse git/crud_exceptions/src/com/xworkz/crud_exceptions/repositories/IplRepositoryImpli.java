@@ -10,19 +10,20 @@ public class IplRepositoryImpli implements IplRepository {
 	@Override
 	public boolean makeTeam(IplDTO dto) {
 		System.out.println("running the makeTeam");
-		if(this.currentIplIndex>=iplDto.length) {
+		if (this.currentIplIndex >= iplDto.length) {
 			throw new IplTeamSizeExceedException();
 		}
 		this.iplDto[this.currentIplIndex] = dto;
 		currentIplIndex++;
-		System.out.println("saved "+dto+"in index"+total());
-		
+		System.out.println("saved " + dto + "in index" + currentIplIndex);
+
 		return true;
 	}
-    @Override
+
+	@Override
 	public int total() {
 		System.out.println("running the total");
-		return this.currentIplIndex;
+		return this.iplDto.length;
 
 	}
 

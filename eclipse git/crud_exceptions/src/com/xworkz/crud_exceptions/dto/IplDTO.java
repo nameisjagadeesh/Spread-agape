@@ -1,6 +1,6 @@
 package com.xworkz.crud_exceptions.dto;
 
-public class IplDTO extends IplAbstractAuditDTO {
+public class IplDTO extends AbstractAuditDTO {
 
 	private String ownerName;
 	private String captainName;
@@ -9,6 +9,13 @@ public class IplDTO extends IplAbstractAuditDTO {
 	private int noOfTrophies;
 	private int noOfWins;
 	private int noOfDefeats;
+
+	@Override
+	public String toString() {
+		return "IplDTO [ownerName=" + ownerName + ", captainName=" + captainName + ", teamName=" + teamName + ", purse="
+				+ purse + ", noOfTrophies=" + noOfTrophies + ", noOfWins=" + noOfWins + ", noOfDefeats=" + noOfDefeats
+				+ "]";
+	}
 
 	public String getOwnerName() {
 		return ownerName;

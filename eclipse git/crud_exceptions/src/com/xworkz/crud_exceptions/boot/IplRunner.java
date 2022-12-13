@@ -25,6 +25,7 @@ public class IplRunner {
 		team1.setUpdatedDate(LocalDateTime.of(2022, 12, 12, 4, 15));
 		iplRepository.makeTeam(team1);
 		System.out.println(iplRepository.total());
+		team1.getCaptainName();
 
 		System.out.println("~~~~~~~~~~~~~~~~IPL Team 2~~~~~~~~~~~~~~~~~~~~");
 		IplDTO team2 = new IplDTO();
@@ -153,7 +154,7 @@ public class IplRunner {
 		team9.setUpdatedDate(LocalDateTime.of(2022, 12, 12, 4, 46));
 		iplRepository.makeTeam(team9);
 		System.out.println(iplRepository.total());
-		
+
 		System.out.println("~~~~~~~~~~~~~~~~IPL Team 10~~~~~~~~~~~~~~~~~~~~");
 		IplDTO team10 = new IplDTO();
 		team10.setTeamName("RR");
@@ -169,7 +170,6 @@ public class IplRunner {
 		team10.setUpdatedDate(LocalDateTime.of(2022, 12, 12, 4, 46));
 		iplRepository.makeTeam(team10);
 		System.out.println(iplRepository.total());
-
 
 	}
 

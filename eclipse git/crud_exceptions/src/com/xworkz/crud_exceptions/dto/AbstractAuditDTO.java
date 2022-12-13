@@ -3,15 +3,15 @@ package com.xworkz.crud_exceptions.dto;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public abstract class IplAbstractAuditDTO implements Serializable {
+public abstract class AbstractAuditDTO implements Serializable {
 
 	private String createdBy;
 	private LocalDateTime createDate;
 	private String updatedBy;
 	private LocalDateTime updatedDate;
 
-	public IplAbstractAuditDTO() {
-		// TODO Auto-generated constructor stub
+	public AbstractAuditDTO() {
+		System.out.println("running the IplAbstractAuditDTO's default constructor ");
 	}
 
 	@Override
