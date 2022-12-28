@@ -12,8 +12,8 @@ JRE:JAVA RUNTIME ENV>RUN PROGRAM , JRE HAS JVM
 JVM:JAVA VIRTUAL MACHINE>RUNS N EXCECUTE THE PROGRAM
 JRE CONSIST OF JVM
 JDK is basically a software development environment which is used to develop applications and applets.  jdk has tools and bins
-Jre is a set of software tools which provides the run time environment , it contains set of liberaries
-JRE is physical implementation of JVM as It provides a platform to execute java programs. jvm is responible for converting byte code into system specific instruction
+JRE is a set of software tools which provides the run time environment , it contains set of liberaries
+JRE is physical implementation of JVM as It provides a platform to execute java programs. jvm is responible for converting byte code into system specific instruction.
 
 JAVA IS WIDELY USED PROGRAMMING LANGUAGE FOR CODING WEB APPLICATION
 JAVAC COMPILES PROGRAM LANGUAGE INTO CLASS FILES THAT RUN ON THE JVM ,JAVAC USES JRE
@@ -45,7 +45,7 @@ INSTANCE MEMORY TO STORE NON PREMITIVE
 system.out.println(statement)> system:is class,. is a dot operator,out: static variable ,statement is args , println is static method , S should b in caps
 
 output in java is information
-use of writing program is to represent objec ,
+use of writing program is to represent object ,
 data=is variable.> ways/types=static,instance,loacal,parameter ,data is use to store data
 declaring a variable=datatype refname(value)ex: Pizza pizza;
 initialise a variable=by adding ;(semicolon which means end of statemnet)
@@ -172,7 +172,7 @@ casting=converting the parent reference to sub ckass(child class) only when pare
 upcasting.
 constructors are not inherited bcz they used to just initialisation of instance variable
 java doesn’t support multiple inheritance by class but supports from interface
-static members are not inherited
+static members are inherited but cant be overriden
 
 Class and parents terminologies 
 childclass/subclass/derivedclass
@@ -206,7 +206,7 @@ When we use make method as final we can inherit the method but can’t be overri
 Out of 11 methods of object only 9 methods are accessed using reference
 
 Hashcode used internally for hashing algorithms 
-Equals method compare data of 2 objects(for primitive) and == for primitive and non primitive data type 
+Equals method compare data of 2 objects(for non primitive) and == for primitive and non primitive data type 
 
 String is immutable bcz it cant be inherited and modified (final)
 2 ways to create string = littereal and with new keyword 
@@ -223,7 +223,7 @@ Interface used to achieve abstraction
 Class can implement n no of Interface but extend only one class
 Instance creation is not possible for abstract class ,but  abstract class has default constructor
 Abstraction class is completed using subclass 
-Interface is also a incomplete abd it is completed using implementation 
+Interface is also a incomplete and it is completed using implementation 
 abstract class has default constructor but cant be used with new keyword ,only purpose is to chaining 
 Parametrised constructor is mandatory in abstract class only when parent class has no default constructor 
 One Interface extends another Interface or n no of interface
@@ -240,7 +240,7 @@ Error: system issue, memory issues , errors cant be recovered
 Exceptions : isssues in our program, data issues
 Run time exceptions : logic issue
 Throwable is not used bcz we cant distinguished between errors and exception
-Throw keyword is used to declare the exceptional event (throw new RuntimeException();)
+Throw keyword is used to declare the exceptional event ( ex=throw new RuntimeException();)
 
 Keywords in java are something that has got a special meaning.
 A variable is something that holds a value in the memory.
@@ -288,12 +288,87 @@ types of tryblocks syntaxs;
 5.try with finally block                  try{}  finally{}
 6.try with catch and finally block        try{} catch(type){} finally{}
 7.try with multi catch blocks             try{} catch(type|type1){}
-8.try with multi catch blocks and finally block   
+8.try with multi catch blocks and finally block  
+Jvm calls the catch block
+Jvm will create exception at run time 
+Finally (warranty )block will assured to always run it is assured by jvm , finally block helps to print important logics
+System.exit(8) is the only method by which jvm gets killed  and finally will not executed,this method should not be used in industry 
+Finally used to close the resource/ write a import logic
+
+The stack trace, also called a backtrace, consists of a collection of stack records, which store an application's movement during its execution. The stack trace includes information about program subroutines and can be used to debug or troubleshoot and is often used to create log files
+
+For loop is to access 
+In interface only if we write default then we can write body
+Class can be RuntimeException is by inheritance
+Comple time exception created by extending exception 
+Run time exception created by extending run time exception 
+
+DTO - data transfer object it is a design pattern
+It is a class it should only has datas not the methods
+5 Rules
+- [ ] Class should be non final
+- [ ] Implements Serialisable( marker interface ) it taking the data from heap to permanent file
+- [ ] All properties must be private
+- [ ] It should have no arg constructor 
+- [ ] It may have setter n getter methods
+Audit properties of DTO
+Properties 
+Created by
+Created date
+Update by
+Update date
+
+Audit class must be abstract class bcz it is incomplete and we still dont know whose data it is ( create n update) , it is completed by sub class
+We get FQN from toString method for that reference 
+
+By using the repositoryname.super. Method name we can inherit the methods from sub class
+
+Service: is a datatype/class which is used to write business logic and validation
+Repository: to data store, methods to perform crud operation 
+Tostring is to just display 
+
+Collection 
+It is a class 
+It is a customised non primitive data type 
+It is a interface 
+It is in the java.util
+Jar files : collection of .class 
+Arrays limitation ::operate over index only and it doesn’t have methods to operate 
+Collection was introduced to address the limitations of arrays
+Collection used to store thé references with methods
+<E> is a diamond operator which is used to declare the generics ( similar data types)
+We can’t store primitive datatypes in collections 
+Use of collections: to group the reference 
+Array list : allow the duplicates and follow insertion order
+HashSet : dont allow the duplicates and not follow the order
+Whenever we access the element by for each , always tostring method called (not fqn)
+Loop accessing: for each(this is used when we are sure that collection are not modified), iterator , stream  
+Iterator will. Allow access the elements from collection
+This is used when the collection are modified and avoid the exception even after modifications 
+Itertor has 3 methods:
+boolean hasnext();
+Elements next();
+void remove();
+Iterator follows the curser ( on top of array list) hasnext——-> next();
+Si
+Concurrent modificationException is thrown when we used the for each and made the modification 
+Iterator (); method will return iterator implementation type 
+Main advantage of collection: access it , searching, sorting n ordering easily 
+Tostring it will represent an object as string
+remove method internally works as equals method
+Collection remove method returns boolean where it will check the ref and remove which is not guaranteed remove where as iterator remove method returns void which will guaranteed removal 
+Contains method internally does equals method
+Containsall, addall, remove all requaires the reference of collection
+Collection.remove(obj) depends upon the equals method
+Itr.remove(); doesn’t depends equals method 
 
 in eclipse while creating new project we use classes/standards(folder name) instead of bin, bcz bin is for a windows standard ,but classes used to store the byte bytecode  
 
 without initialisation local variable cant be used
 A class is a group of objects which have common properties. It is a template or blueprint from which objects are created. It is a logical entity. It can't be physical.
+Instance variable doesn't get memory at compile time. It gets memory at runtime when an object or instance is created. That is why it is known as an instance variable.
+
+In java, we have 7 non-access modifiers. They are used with classes, methods, variables, constructors, etc to provide information about their behavior to JVM. They are as follows:static,final,abstract,synchronized,transient,volatile,native
  
  
 
