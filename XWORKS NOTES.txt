@@ -26,8 +26,8 @@ byte code is a special format which is understood by only JVM,CLASS=BYTE CODE
 javac generates bytecode
 developers writes source code
 PLATFORM INDEPENDENT, IS JAVA COMPILED CODE (BYTE CODE) CAN RUN ON ALL OS
-Datatype is a set of values and set of operations defined on those values .It defines what type of data and the size of data that is stored in a variable.
-Variables are containers which stores the values.
+Datatype is a set of values and set of operations defined on those values .It defines what type of data and the size of data that is stored in a variable. ex=int size=56;
+Variables are containers which stores the values. or variables are ref which points to the memory
 
 JAVA IS OBJECT ORIENTED PROGRAMMING LANGUAGE,JAVA REPRESENTS REAL WORLD
 OBJECT/class/things HAS STATES(DATA) AND BEHAVIOUR(ACTION)
@@ -46,7 +46,7 @@ system.out.println(statement)> system:is class,. is a dot operator,out: static v
 
 output in java is information
 use of writing program is to represent object ,
-data=is variable.> ways/types=static,instance,loacal,parameter ,data is use to store data
+data=is variable.> ways/types=static,instance,local,parameter ,data is use to store data
 declaring a variable=datatype refname(value)ex: Pizza pizza;
 initialise a variable=by adding ;(semicolon which means end of statemnet)
 datatype in java are 2 types =premitive n non premitive, premitive is to denote values, non primitive to compex value
@@ -54,7 +54,7 @@ types of primitive parameter(java dataypes)=byte ,short ,int , long ,float ,doub
 
 non primitive =any class we write is non premitive ,types=countless
 any class will  have state and behaviour
-local variable=declared within method body
+local variable=declared within method body ,local variables cant be used without initialisation
 pop=removing  a method
 concatenation to add  which join results,adding strings together(+)
 if two ref pointing to same memory we have to use "doble equals operater(==)" ,it will never check value
@@ -230,6 +230,7 @@ One Interface extends another Interface or n no of interface
 Marker Interface :it with no abstract methods
 Java is pure objective oriented but it depends on developer how he uses it 
 Ex: private int no; Or private Integere no;       We can use both things
+instance creation is not possible in interface but we can creat implementation
 
 EXCEPTIONAL EVENTS (Exception’s)
 Events which stop the normal execution are called exceptional events 
@@ -353,6 +354,7 @@ Iterator follows the curser ( on top of array list) hasnext——-> next();
 Si
 Concurrent modificationException is thrown when we used the for each and made the modification 
 Iterator (); method will return iterator implementation type 
+Iterator interface provides the facility of iterating the elements in a forward direction only.
 Main advantage of collection: access it , searching, sorting n ordering easily 
 Tostring it will represent an object as string
 remove method internally works as equals method
