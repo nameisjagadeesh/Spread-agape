@@ -329,6 +329,8 @@ Repository: to data store, methods to perform crud operation
 Tostring is to just display 
 
 Collection 
+collection is an interface used to represent the group of individual objects as a single entity
+Collections is a class(java.util) in java using which we can sort the elements in collection
 It is a class 
 It is a customised non primitive data type 
 It is a interface 
@@ -364,6 +366,7 @@ Containsall, addall, remove all requaires the reference of collection
 Collection.remove(obj) depends upon the equals method
 Itr.remove(); doesn’t depends equals method 
 
+
 in eclipse while creating new project we use classes/standards(folder name) instead of bin, bcz bin is for a windows standard ,but classes used to store the byte bytecode  
 
 without initialisation local variable cant be used
@@ -371,6 +374,8 @@ A class is a group of objects which have common properties. It is a template or 
 Instance variable doesn't get memory at compile time. It gets memory at runtime when an object or instance is created. That is why it is known as an instance variable.
 
 In java, we have 7 non-access modifiers. They are used with classes, methods, variables, constructors, etc to provide information about their behavior to JVM. They are as follows:static,final,abstract,synchronized,transient,volatile,native
+
+SPRING:
  
  
 

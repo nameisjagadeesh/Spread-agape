@@ -1,0 +1,17 @@
+SQL NOTES
+to manage the info we develop application
+3 layers of application= presentation layer(html,css,js),business layer(backend),datalayer
+these three layers interconnected with APIs 
+APIs perform=Post,get,put,delete(CRUD operation)
+presentation layer and business layer connected through http api
+business layer and datalayer connected through JDBC,Hibernate(or by writing the SQL to communicate with database)
+json=java script object notation
+client(laptop) will send request to server to respond the request
+mysql=1995
+DATABASE =organised collection of data ,these are collected in rows and coloumns i.e TABLES
+DDL=(Data defination language)=to create and manage the structure of database
+DDL Commands
+1.Create=to create the table to contain data in database
+syntax =CREATE DATABASE database_name  (ctr+shift+enter  =to excecute)
+SELECT command is only  to read or fetch the data(* is to select all) not to manupulate
+DML statements
