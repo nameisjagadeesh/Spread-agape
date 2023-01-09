@@ -9,9 +9,21 @@ json=java script object notation
 client(laptop) will send request to server to respond the request
 mysql=1995
 DATABASE =organised collection of data ,these are collected in rows and coloumns i.e TABLES
-DDL=(Data defination language)=to create and manage the structure of database
+DDL=(Data defination language)=to create and manage the structure of database =CREATE,ALTER(to alter the existing table)
+ALTER=can add table,drop table,rename coloumn,change the datatype
+can change the data type int to varchar ,int to bigint , but cant change from varchar to int
+DESC table_name =is to find the decription
 DDL Commands
 1.Create=to create the table to contain data in database
 syntax =CREATE DATABASE database_name  (ctr+shift+enter  =to excecute)
 SELECT command is only  to read or fetch the data(* is to select all) not to manupulate
-DML statements
+FROM is a clause to pull the data
+DML statements=data manupulation language = to insert and manage the data
+once table excecuted it cannot be modified
+
+https://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@github.com/nameisjagadeesh/SQL-repo-.git
+
+
+
+
+
