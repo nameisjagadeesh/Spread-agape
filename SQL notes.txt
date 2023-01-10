@@ -20,6 +20,8 @@ SELECT command is only  to read or fetch the data(* is to select all) not to man
 FROM is a clause to pull the data
 DML statements=data manupulation language = to insert and manage the data
 once table excecuted it cannot be modified
+TRUNCATE command used to delete the data but structure remains same
+DROP TABLE will delete whole table
 
 https://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@github.com/nameisjagadeesh/SQL-repo-.git
 
