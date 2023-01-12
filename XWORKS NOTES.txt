@@ -365,6 +365,8 @@ Contains method internally does equals method
 Containsall, addall, remove all requaires the reference of collection
 Collection.remove(obj) depends upon the equals method
 Itr.remove(); doesn’t depends equals method 
+Serializable is the ability to transfering objects across the networks (storing the data from memory to permanent database)
+comparator is a interface used for custom sorting
 
 
 in eclipse while creating new project we use classes/standards(folder name) instead of bin, bcz bin is for a windows standard ,but classes used to store the byte bytecode  
@@ -374,8 +376,38 @@ A class is a group of objects which have common properties. It is a template or 
 Instance variable doesn't get memory at compile time. It gets memory at runtime when an object or instance is created. That is why it is known as an instance variable.
 
 In java, we have 7 non-access modifiers. They are used with classes, methods, variables, constructors, etc to provide information about their behavior to JVM. They are as follows:static,final,abstract,synchronized,transient,volatile,native
+Interface :
+- it's a keyword
+- it's a non-primitive data-type
+- connection/bridge between 2 systems/classes.
+- never use literal way to initialise.
 
-SPRING:
+Marker Interface :
+- method without body 
+- taking data from heap(temporary memory) to file(permanent memory) is Serializable, vice-versa is de-serializable
+- ex : Serializable, randomAccess
+
+Functional Interface :
+- interface with only one abstract method & can have static/default methods 
+- syntax : interface Class name{
+                abstract MethodName(); or void MethodName ();
+                 }
+- @FunctionalInterface annotation optional 
+Lambda Expression : 
+- ()->{}
+- () to contain references based on parameters
+- -> separates arguments from body
+- used when there's functional Interface
+- no data-type is specified
+- passing a function as an argument
+- based on parameters & return-type of method 
+- body is optional but required when multiple parameter
+
+collection.forEach method :
+- used to loop all elements
+
+SPRING: it is a framework to manage the objects
+why spring? it is flexible,fast,productive,secure,supportive,manages objects easily.
  
  
 
