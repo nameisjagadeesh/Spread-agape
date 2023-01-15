@@ -1,4 +1,4 @@
-SQL NOTES
+SQL NOTES  pass Xworkz@123
 to manage the info we develop application
 3 layers of application= presentation layer(html,css,js),business layer(backend),datalayer
 these three layers interconnected with APIs 
@@ -10,7 +10,7 @@ client(laptop) will send request to server to respond the request
 mysql=1995
 DATABASE =organised collection of data ,these are collected in rows and coloumns i.e TABLES
 DDL=(Data defination language)=to create and manage the structure of database =CREATE,ALTER(to alter the existing table)
-ALTER=can add table,drop table,rename coloumn,change the datatype
+ALTER=can add table,drop table,rename coloumn,change the datatype,shuffle column
 can change the data type int to varchar ,int to bigint , but cant change from varchar to int
 DESC table_name =is to find the decription
 DDL Commands
@@ -22,8 +22,21 @@ DML statements=data manupulation language = to insert and manage the data
 once table excecuted it cannot be modified
 TRUNCATE command used to delete the data but structure remains same
 DROP TABLE will delete whole table
+WHERE is used to filter the data
+boolean =true -1,false=0
+DML keywords=SELECT,INSTERT,UPDATE,DELETE-------> CRUD operation
+DDL=CREATE,ALTER,TRUNCATE,RENAME,DROP
+AND operator all entries should be true;
+OR operator atleast one is true
+Rollback to get data back
+DELETE =we can delete data and can be rollback
+DROP=delete the entire data and cant rollback
+TRUNCATE=delete the data but structure remains same and it cant be rollback.
 
 https://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@github.com/nameisjagadeesh/SQL-repo-.git
+
+TCL(Transaction Control Language)= COMMIT(permanent delete which will not rollback),
+ROLLBACK,SAVEPOINT;
 
 
 
