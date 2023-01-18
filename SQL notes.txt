@@ -33,6 +33,22 @@ DELETE =we can delete data and can be rollback
 DROP=delete the entire data and cant rollback
 TRUNCATE=delete the data but structure remains same and it cant be rollback.
 
+IN -to avoid multiple ORs conditions
+NOT IN -to exclude the perticular data
+Between- to select withing the ranges
+%= will match any string of any length
+%s=find words which  ends with s
+s%=find letters which starts with s 
+%s%=will find words contains s anywhere
+LIKE operator used for varchar
+UPPER and LOWER=convert data into uppercase and lowercase ,here original data will not be modified
+concat= will join any two columns,here as used as alias which is a temporary column name
+Instr=to find out the any position of any single charecter ,if string contains duplicate chars it will always take first char,takes only one parameter
+Substr= to find only some of the charecters,
+SUBSTR(stringvalue,startposition,noofcharecter),takes only one parameter
+distinct =to avoid the duplicate values and return the unique values,takes only one parameter
+
+
 https://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@github.com/nameisjagadeesh/SQL-repo-.git
 
 TCL(Transaction Control Language)= COMMIT(permanent delete which will not rollback),
