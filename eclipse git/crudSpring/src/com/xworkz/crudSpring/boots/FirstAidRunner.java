@@ -16,19 +16,22 @@ public class FirstAidRunner {
 	public static void main(String[] args) {
 		ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfiguration.class);
 		FirstIAidService firstAid = context.getBean(FirstIAidService.class);
-		boolean saved = firstAid.validateAndSave(new FirstAidDTO());
+		FirstAidDTO dto = new FirstAidDTO("appollo", 3652, "emergency"); //this is explicit
+		boolean saved = firstAid.validateAndSave(dto);
 		System.out.println("saved" + saved);
 
 		System.out.println("~~~~~~~~~Running the MissileDto~~~~~~~~~~~");
 
 		MissileService missile = context.getBean(MissileService.class);
-		boolean save = missile.validateAndSave(new MissileDTO());
+		boolean save = missile.validateAndSave(new MissileDTO()); //this is implicit
 		System.out.println("savedMissile" + save);
-		
+
 		System.out.println("~~~~~~~~~Running the ResortDto~~~~~~~~~~~");
 
 		ResortService resort = context.getBean(ResortService.class);
-		boolean saving = resort.validateAndSave(new ResortDTO());
+		//OR
+		ResortDTO dto1=new ResortDTO(); //this is explicit 
+		boolean saving = resort.validateAndSave(dto1);
 		System.out.println("savedMissile" + saving);
 	}
 
