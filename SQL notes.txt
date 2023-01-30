@@ -24,7 +24,7 @@ TRUNCATE command used to delete the data but structure remains same
 DROP TABLE will delete whole table
 WHERE is used to filter the data
 boolean =true -1,false=0
-DML keywords=SELECT,INSTERT,UPDATE,DELETE-------> CRUD operation
+DML keywords=SELECT,INSERT,UPDATE,DELETE-------> CRUD operation
 DDL=CREATE,ALTER,TRUNCATE,RENAME,DROP
 AND operator all entries should be true;
 OR operator atleast one is true
@@ -40,19 +40,47 @@ Between- to select withing the ranges
 %s=find words which  ends with s
 s%=find letters which starts with s 
 %s%=will find words contains s anywhere
-LIKE operator used for varchar
+LIKE operator used for varchar,We can use the LIKE command in SQL to identify patterns in a database using character strings.
 UPPER and LOWER=convert data into uppercase and lowercase ,here original data will not be modified
 concat= will join any two columns,here as used as alias which is a temporary column name
 Instr=to find out the any position of any single charecter ,if string contains duplicate chars it will always take first char,takes only one parameter
 Substr= to find only some of the charecters,
 SUBSTR(stringvalue,startposition,noofcharecter),takes only one parameter
 distinct =to avoid the duplicate values and return the unique values,takes only one parameter
+Agrregate Functions= perform calculation on a colums,these are only used for numeric data
+and original data will not be modified.
+1.COUNT= SELECT * from table_name ,it will check no of rows
+2.SUM= sum all the data from column
+3.MAX=find max value
+4.MIN ,AVG
+ENUM=is a kind of datatype,selects from that constants only ,we can select the enum name or position of the enum type
+LENGTH=calculate the length of charecters in a colum ,only used one column
+LTRM -left remove the leading spaces
+RTRIM-remove the right side trail spaces we cant remove middle space lik "jagg uuu* for this we have to use regular expression
+ORDER BY- by default it will be ascending ,use desc to show descinding order, in real we sould use it for numeric data
+CONSTRAINTS (validation)= to limit or set some rules for the data ,ex-to avoid null n duplicate values constarints are applied to only column while table creation and while altering the table types of constraints-1.notNull=it will not accept null values in clolumns ,it will accept duplicate values
+2.Unique= it will not accept the duplicate values but accept null values
+3. CHECK=to limit the range of the values, applied to cloumns not null, unique, check are coulmn level constraints columnname datatype not null
+constraint violation - any error related to constraint
+4>primary key-uniqly identifies each n evry row and column,bydefault it has unique and not null constarints
+every table has primary key,but each table has only one primarykey,column can have multiple primarykey
+Foreign key=is a column in one table that refers  to primary key of other table
+primary key is present in parent table ,u cant drop the parent table ,first child table should be dropped
+foreign key is present in child table  ,it can accept duplicate values
+primary key and foreign key should always be same n these are table level constarints 
+not null,unique,check are the column level constraints
+purpose of foreign and primary key is to establish the relation between two tables
+autoincrement-only for ids where it is not duplicated
+currentdate : SELECT current_date();
+datediff= SELECT datediff('2023-01-25',2023-01-12);
 
+The schema represents the logical structures of data. Using schemas, the database objects can be grouped logically in a database.
 
-https://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@github.com/nameisjagadeesh/SQL-repo-.git
+https://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@github.com/nameisjagadeesh/SQL-repo-.git..
 
-TCL(Transaction Control Language)= COMMIT(permanent delete which will not rollback),
-ROLLBACK,SAVEPOINT;
+TCL(Transaction Control Language)=TCL commands are basically used for managing and controlling the transactions in a database to maintain consistency. And it also helps a user manage all the changes made by the DML commands for maintaining its transactions.
+ COMMIT(permanent delete which will not rollback),
+ROLLBACK,SAVEPOINT(to roll back used to mark the table);
 
 
 

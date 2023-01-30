@@ -180,7 +180,7 @@ Parent/superclass/baseclass
 
 variable is a ref to address and it stores the value.
 jvm decides which method to executes at run time(from parent or child) this is called as run time polymarphism
-run time polymarphism achieved by overridding
+run time polymarphism(Or Dynamic method dispatch) achieved by overridding
 overridding is compile time bcz compiler will check the errors during the method overridding(@overridding)
 @(annotation) was introduced during java 1.5version ,it will check compile time errors.
 
@@ -209,12 +209,13 @@ Hashcode used internally for hashing algorithms
 Equals method compare data of 2 objects(for non primitive) and == for primitive and non primitive data type 
 
 String is immutable bcz it cant be inherited and modified (final)
-2 ways to create string = littereal and with new keyword 
+2 ways to create string = littereal and with new keyword+
+
 String has 65+11= 76 methods by default 
 Internally string is represented as char[]
 Constant pool never duplicates and instance memory can duplicate ( as we used with new keyword)
 
-Interface bridge between 2 ststem(class) or rules allows two classes interact 
+Interface bridge between 2 system(class) or rules allows two classes interact 
 Interface is a keyword,non primitive datatype,cant declare constructor, cant create instances,declared as public (abstract,static,default)method, class only provides for implementation,it doesn’t support concrete methods(non static and non abstract),variables as public static final , it supports multiple inheritance 
 Interface is 100% abstract and class is not 100% abstract(bcz class has both abstract and complete methods), class has methods with implementation but abstraction has no
 Class has both abstract and concrete methods .
@@ -256,7 +257,7 @@ array=Can store only homogenous data.Arrays are fixed, that is, when we declare 
 The process of automatic conversion of non primitive data type in to its corresponding primitive type by the compiler is called unboxing.
 The process of automatic conversion of primitive data type in to its corresponding non primitive data type by the compiler is called autoboxing.
 
-singleton class=is a class whose only one instance can be created at any given time in one jvm .a class can be made singleton by making its constructor private
+singleton class=is a class whose only one instance can be created at any given time in one jvm .a class can be made singleton by making its constructor private.
 
 EXCEPTIONAL EVENTS (Exception’s)
 Events which stop the normal execution are called exceptional events 
@@ -294,7 +295,7 @@ Jvm calls the catch block
 Jvm will create exception at run time 
 Finally (warranty )block will assured to always run it is assured by jvm , finally block helps to print important logics
 System.exit(8) is the only method by which jvm gets killed  and finally will not executed,this method should not be used in industry 
-Finally used to close the resource/ write a import logic
+Finally used to close the resource/ write a import logic.there is one scenario where the finally block does not execute. When you run System.exit(0) in the try or catch block, then finally block does not execute.
 
 The stack trace, also called a backtrace, consists of a collection of stack records, which store an application's movement during its execution. The stack trace includes information about program subroutines and can be used to debug or troubleshoot and is often used to create log files
 
@@ -353,7 +354,6 @@ boolean hasnext();
 Elements next();
 void remove();
 Iterator follows the curser ( on top of array list) hasnext——-> next();
-Si
 Concurrent modificationException is thrown when we used the for each and made the modification 
 Iterator (); method will return iterator implementation type 
 Iterator interface provides the facility of iterating the elements in a forward direction only.
@@ -365,8 +365,46 @@ Contains method internally does equals method
 Containsall, addall, remove all requaires the reference of collection
 Collection.remove(obj) depends upon the equals method
 Itr.remove(); doesn’t depends equals method 
+Casting is done to access the properties of subclass 
+Parameter of equals method is Object
+Remove , contain, containall , removeall uses equals method
+Collection works properly only when we override the equals method
+List.add —-> it will add element to next index
+List.set—-> it will replace the element wrt to that index
+Ref added to collection is called elements 
+Sql installation steps:
+Custom-server-8.0-8.021-
+Excecute
+
+In stream method ,filter method is used when there is a condition to check
+Lambda expression— ()->{}
+Parameter is optional when a ref is only one
+Body is optional when there is a one statements 
+-> is mandatory 
+
+Linked list: implementation of queue(circular queue, it works on node where one node is linked with other node
+Linked list is slower while reading and   Faster while updating compared to arraylist which is faster while reading n slower while updating bcz it needs to update all the index
+Linked list node: head-tail
+Map :
+￱it's an interface
+￱used to store group of references in form of key & value
+It works in the concept of dictionary 
+￱key is unique & value can be duplicate
+￱hierarchy : Map-->has subtype-SortedMap(TreeMap)
+      implemented by HashTable & HashMap(LinkedHashMap)
+Properties is also implementation of map
+￱entry is an reference in map like element in collection 
+￱methods :                                                  1)put - to add entry,                                 2)size - check capacity,                     3)isEmpty - to check entry presence, 4)keyset - to access only keys,                      5)values - only values access,         6)entrySet - access key & value together
+￱declaring map in 2 ways - with generic & without
+￱access 3 probabilities :                            1)only keys - keySet                                                    2)only values - values                                              3)both - entrySet
+Sorting map: use treeMap implementation 
+Map doesn’t have stream method
+
+HashMap is non synchronized and not thread safe.On the other hand, Hashtable is thread safe and synchronized.
+ HashMap allows one null key and any number of null values, while Hashtable do not allow null keys and null values in the Hashtable object. hashmap is fast and hashtable is slow
+
 Serializable is the ability to transfering objects across the networks (storing the data from memory to permanent database)
-comparator is a interface used for custom sorting
+comparator is a interface used for custom sorting.
 
 
 in eclipse while creating new project we use classes/standards(folder name) instead of bin, bcz bin is for a windows standard ,but classes used to store the byte bytecode  
@@ -382,10 +420,20 @@ Interface :
 - connection/bridge between 2 systems/classes.
 - never use literal way to initialise.
 
+StringBuffer is mutable means one can change the value of the object . The object created through StringBuffer is stored in the heap . StringBuffer  has the same methods as the StringBuilder , but each method in StringBuffer is synchronized that is StringBuffer is thread-safe. 
+StringBuffer demo1 = new StringBuffer("Hello") ; ------->,demo1 = new StringBuffer("Bye"); 
+ 
+StringBuilder  is same as the StringBuffer , that is it stores the object in heap and it can also be modified . The main difference between the StringBuffer and StringBuilder is that StringBuilder is  not thread safe. 
+StringBuilder is fast as it is not thread safe.
+StringBuffter and StringBuilder are mutable versions of string
+
+
 Marker Interface :
 - method without body 
 - taking data from heap(temporary memory) to file(permanent memory) is Serializable, vice-versa is de-serializable
 - ex : Serializable, randomAccess
+transient keyword in Java is used to avoid Serialization.  If the variable is marked as transient then it will not be serialized.
+If a variable is marked as volatile then this variable is read from the main memory instead of cache memory.
 
 Functional Interface :
 - interface with only one abstract method & can have static/default methods 
@@ -408,6 +456,99 @@ collection.forEach method :
 
 SPRING: it is a framework to manage the objects
 why spring? it is flexible,fast,productive,secure,supportive,manages objects easily.
+Maven :
+it is Project management tool 
+It will be used to download the jar (libraries) files
+Dependency are jar files from maven.
+
+Spring
+It is a framework , framework is a solution to common problems
+Spring is not about coding its about configuration 
+Spring is mainly used to manage objects 
+Manage: create, initiate, destroy 
+Bean is a object which is managed by spring 
+Meta -info : is a data of external systems 
+Meta-info~~ spring~~ bean
+@configuration: making class as to provide configuration which passes the meta infor
+@component: mark so that spring can manage object and create instances.
+It will look for no argument constructor
+@componetscan: to scan the component in perticular package , after that it will create instances  , it should be in configuration class
+@bean is used when we have only .class files where u have to create class and spring will manage the object
+@bean will register an object
+@component is used when we have .java and spring will create and manage the object
+Whenever a object manages other objects it is called as containing ex: Applicationcontext(interface)
+Primary container/hierarchy of spring: beanFactory(core container , dont support AOP ) ApplicationContext(advanced container with more feature, does support AOP)-WebWpplicationContext (support webApplication development )
+AOP: aspect oriented program
+bean names: when we have two or more beans of same datatype
+@bean is only used on top of the method , not constructor or class
+@Value: to initialise the variable in string litteral here it can be loaded from outside class or file
+It is used only for primitive, string n wrapper classes ,not for custom types
+When we use java literals initialisation in spring (=“”) it will be hardcoded and cant load from outside class (file)
+@value cant be used within the method and over the @ban
+GetBean method: needs ref of container 
+AutoWired method : needs component @autowired is annotation to get the ref of other bean managed by spring, it also initialise the bean of custom type
+@Qualifier:to refer a bean by name 
+tostring will loop and access the references
+Spring is designed by following IOC(inversion of control) where the task is done by third party
+IOC: Inverting the managing  of object via spring
+DI: Dependency Injection , it is different from maven dependency 
+It is getting the ref of an bject
+It is done 2 ways : by property and constructor and also with setter
+M2 folder in maven project is a repository 
+$ in maven is a expression language
+Spring is a DI framwork
+
+Quarkus and lombok
+@notblank/notemply: for only string
+@notnull:for for any non primitive 
+Spring will not manage the dto class as the properties in dto will change
+In industries SOP is not used as it cost performs as sop will use many processes in a system after coming out
+Logger is used to print 
+Server: is a computer which serves the resources 
+
+Servlet- is a interface or a small java program which runs on web server
+servlet hierarchy --- Servlet(5 methods)--->1.GenericServlet(one abstract method
+                                            2.HttpServlet(no abstract methods) it better a subclass to extend this
+200 code when resource is available 
+404 : when resources is not available 
+500:issues in resource 
+2 types of server : computer and software 
+Server : software and hardware 
+Server: apache tomcat 9
+Context : files in webapps tomcat 
+To connect server:
+http://localhost:8080/context/resourcename.extentions
+Ex:http://169.254.51.3:8080/avatar/chocolate.png
+Here https should not be used , http is for local network and https for secured one
+http://google.com is. a vanity /f5 URL
+google.com is a domain
+google  is a domain name
+.com is a domain type
+Content-type/MIME type: img,mp3,pdf.. etc
+
+Without form in html we cant call java program 
+Tomcat container will manage object if it is a object of servlet (extends httpservlet)where as spring will manage all object
+There should be no parametrised constructor in the servlet class as tomcat get confused which argument to pass
+Tomcat will create only one object at one time and initiated properties only once and will call domethods n times
+HTTP(): it will transfer the text(byte) over network 
+POST(create), GET, PUT,DELETE method
+Get method is defaultly called when server respond
+Error 405 occurs when httpmethod is not equal to domethods of servlet
+Service method will check the domethods
+Tomcat act as bridge between servlet and client
+Content directory: src/main/webapps where static files will be placed like html
+Action in form is to map the servlet
+Loadonstartup : tell server to create object on sequences 
+First request: when we dont give loadonservlet , server will create on requests 
+Requestparameters: url ? parameternames 
+? It will separate the url and parameters 
+Backward compatibility:
+Server lifecycle: initi , service, destroy methods
+Service starts when req is send 
+Destroy called once when we shuttdown the server 
+Init method to : to initiate the resource of servlet
+Destroy method: to clear the resource of servlet
+Req parameters: data we send to back
  
  
 

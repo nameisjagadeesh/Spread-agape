@@ -77,7 +77,7 @@ public class LocationServlet extends HttpServlet {
 			write.print("gender is " + gender);
 		} else {
 			write.print("<span style='color:red'>");
-			write.print("gender is invalid" + gender);
+			write.print("gender is invalid    " + gender);
 		}
 		write.print("<br>");
 		write.print("<a href=\"location.html\">Go back to Location details</a>");

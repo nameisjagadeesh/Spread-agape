@@ -74,7 +74,7 @@ public class ContactServlet extends HttpServlet {
 			write.print("comments are invalid");
 		}
 		write.print("<br>");
-		write.print("<a href=\"contact.html\">Go back to Location details</a>");
+		write.print("<a href=\"contact.html\">Go back to contact details</a>");
 		write.print("</h1>");
 		write.print("</body>");
 		write.print("</html>");
