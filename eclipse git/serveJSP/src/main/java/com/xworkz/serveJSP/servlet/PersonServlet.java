@@ -22,7 +22,7 @@ public class PersonServlet extends HttpServlet {
 		String fname = req.getParameter("fname");
 		String lname = req.getParameter("lname");
 		String gender = req.getParameter("gender");
-		String reason = req.getParameter("reason");
+		String reason = req.getParameter("reason"); 
 		String address = req.getParameter("address");
 
 		System.out.println(fname);
