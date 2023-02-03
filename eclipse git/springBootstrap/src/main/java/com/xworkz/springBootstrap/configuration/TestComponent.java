@@ -12,15 +12,16 @@ public class TestComponent {
 
 	public TestComponent() {
 		System.out.println("created " + this.getClass().getSimpleName());
+
 	}
-	
+
 	@GetMapping
 	public String writeTest(TestDTO dto) {
-		
+
 		System.out.println("running the writeTest");
-		System.out.println("dto is"+dto);
+		System.out.println("dto is" + dto);
 		return "Testjsp.jsp";
-		
+
 	}
 
 }
