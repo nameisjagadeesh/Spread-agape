@@ -550,14 +550,92 @@ Init method to : to initiate the resource of servlet
 Destroy method: to clear the resource of servlet
 Req parameters: data we send to back
  
- 
 
 
+get method :carried in URL ,limited data(2020 characters ) ,it will load a resource
+post method: carried in body ,un-limited data create the data send the data
+JSP: Java Server Pages—-> html+ java
+Jsp is a format which allows to write java , 
+* It is a server side technology.
+* It is used for creating web application.
+* It is used to create dynamic web content.
+* 
+* JSP is a technology to create dynamic web applications while HTML is a standard markup language to create the structure of web pages.
 
+after loading the jsp server will create java file
+Requestforward: forwarding req from server to Jsp
+SetAttribute is to send the data from server
+HTTP is a stateless protocol bcz it will not remember client
+Spring Web MVC(model view controller )
+War : web archive
+Inside src- java and test
+Front controller : design pattern, is a servlet which maps all the req come to application
+Ex: dispatcherServlet
+@Data: lombok will create all getter, setter, tostring
+@Getmapping will map the method
+@requestmapping will map the class and send to server
+Controller classes any class interacts with UI(user interface) and process the request , it will navigate the page
+Webcontainer: will create component (controller) , Handlermapping(I),ViewResolver(I)
+Hetswrveletconfigclassss method help to pass configuration classes to spring 
+Model is to send the data to response 
+Addattribute is : in keys and values
+Error 500 in server is a exception in java program
+If we use scriplet we have to write java in jsp
+If we use JSTL( Java standard tag libs) we can use tags to get complex data
+Getservletmapping: mapping action to dispatcherServlet.”/” which denotes action
+Getservletconfig: helps spring container to create component 
+Getrootconfigclass: listener
+Only form actions will map the dispatcher selrvlet.
+configuredefaultserverhandler:enabling server to handle static resources like html, css, pdf by default .
+Dispatcher servlet will be managed by tomcat
+Handlermapping: to find the controller in spring mvc , it will scan for the @requestmapping( key is always url and value is component)
+controller: getmapping, postmapping. Wecan extract data from @requestparam or dto and returns the page name( index)
+Viewresolver: it will resolve the view and find the page in webapps root
+@component used for generic 
+@service and @controller used for improved readability 
 
+Connecting to DB
+Client—-controller—— service——-repo—- storing in database
+Database doesn’t know about object.here JPA(Java Persistence Api) will save the details of dto into database
+Setup to connect to database
+1.hibernate-core 
+2.spring-orm
+3.persistence.xml
+4. Entity
+5. Mysql drive
+Sequel is a programming language (SQL)
+Ada Lovelace : first programmer in the world
+Protocol: vendor://host:portno/schema-name
+User: root
+For JDBC : mysqul://localhost:3306/schema-name
+We keep credentials of database
+@Entity: using this class we map the properties to DB —-@Entity @Table(name=“”) these coming from javax.persistence 
+@Coloumn (name=“”)
+@ID above property is to denote as primary key 
+In service : we inject service into controller and invoke method of service in controller 
+DTO: it is mapped with UI.
+Entity: it will mapped with table(DB).
+For a href link the method is always get
+Figma is a UI tool
+Bean called LocalcontainerEntityManagerFacyoryBean to create EntityManagerFactory (EMF)
+Inject EMF to repository
 
-
-
+JDBC (Java database connectivity) it is a API which connect java and database
+Package: java.sql
+We need interfaces and implementation of vendor jar files to connect to database.
+Issues with JDBC: data is always in the form of object, JDBC understands only queries(sql) bcz objects has is-a and has-a relation where as jdbc has primary key and foreign key relation, cant store DTO directly to DB, we have to convert object in values,
+to over come this ,JPA used  which will convert object of java to values and stores in DB
+JPA will store and retrieve values from DB
+ORM- object relation mapping .it is a guideline to map object to relational model.
+Hibernate is a community to save object to DB .anybody solves 5 problems will be called ORM tool ex: Mybatis,Toplink,eclipselink
+5 problems : association, inheritance,grain, navigation,identity 
+JPA is a API provides standards to solve the ORM problems, it is implemented by hibernate 
+JPA is a interface and hibernate is a implementation .
+Hibernate is not used directly bcz if we change the vendor we have to change the code .
+When we use JPA we can change vendor without changing the code.
+Controller knows only dto
+Repository knows only entity 
+Service knows both
 
 
 
