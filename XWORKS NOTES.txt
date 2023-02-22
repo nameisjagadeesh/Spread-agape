@@ -497,7 +497,8 @@ It is done 2 ways : by property and constructor and also with setter
 M2 folder in maven project is a repository 
 $ in maven is a expression language
 Spring is a DI framwork
-
+When beans are combined together within the Spring container, they are said to be wired or the phenomenon is called bean wiring.
+Primitive data types, Strings, and Classes can’t be autowired.
 Quarkus and lombok
 @notblank/notemply: for only string
 @notnull:for for any non primitive 
@@ -637,9 +638,12 @@ Controller knows only dto
 Repository knows only entity 
 Service knows both
 
-
-
-
+Spring MVC is request driven framework and one of the core components of the Spring framework.
+It comes with ready to use loosely coupled components and elements that greatly aids developers in building flexible and robust web applications.
+The MVC (Model - View - Controller) architecture separates and provides loose coupling between the different aspects of the application – input logic (Model), business logic (Controller), and UI logic (View).
+DispatcherServlet  handles all the HTTP requests and responses.
+The default ViewResolver used in Spring MVC is InternalResourceViewResolver
+@Autowired annotation is meant for the injection of a bean by means of its type along with methods and fields.
 
 
 
