@@ -231,7 +231,7 @@ One Interface extends another Interface or n no of interface
 Marker Interface :it with no abstract methods
 Java is pure objective oriented but it depends on developer how he uses it 
 Ex: private int no; Or private Integere no;       We can use both things
-instance creation is not possible in interface but we can creat implementation
+instance creation is not possible in interface but we can create implementation
 
 EXCEPTIONAL EVENTS (Exception’s)
 Events which stop the normal execution are called exceptional events 
@@ -276,7 +276,7 @@ Error is an event and compilation error is a syntax problem
 Compile time exception /checked exception: compiler is forcing u to handle issue
 Run time exception/unchecked : compiler will not force u to handle issue
 Jvm will create the exceptional 
-Throws will delegate the exceptional claller of the method to handle the event
+Throws will delegate the exceptional caller of the method to handle the event
 Compiler will uncheck event if it is sub class of RuntimeException 
 Delegate means force creator to handle the method 
 When we delegate to handle exception , use only sub class handlers , dont use parent type exception, throwable,error
@@ -323,7 +323,7 @@ Update date
 Audit class must be abstract class bcz it is incomplete and we still dont know whose data it is ( create n update) , it is completed by sub class
 We get FQN from toString method for that reference 
 
-By using the repositoryname.super. Method name we can inherit the methods from sub class
+By using the repositoryname.super. Method name we can inherit the methods from sub class and it came from default method
 
 Service: is a datatype/class which is used to write business logic and validation
 Repository: to data store, methods to perform crud operation 
@@ -378,14 +378,14 @@ Excecute
 
 In stream method ,filter method is used when there is a condition to check
 Lambda expression— ()->{}
-Parameter is optional when a ref is only one
+Paranthesis is optional when a ref is only one
 Body is optional when there is a one statements 
 -> is mandatory 
 
 Linked list: implementation of queue(circular queue, it works on node where one node is linked with other node
-Linked list is slower while reading and   Faster while updating compared to arraylist which is faster while reading n slower while updating bcz it needs to update all the index
+Linked list is slower while reading(bcz it will start from beginning) and   Faster while updating compared to arraylist which is faster while reading(bcz it start from perticular index) n slower while updating(bcz it has to create new array to fit all elements) bcz it needs to update all the index.
 Linked list node: head-tail
-Map :
+Map : it is a set of keys and values
 ￱it's an interface
 ￱used to store group of references in form of key & value
 It works in the concept of dictionary 
@@ -404,7 +404,7 @@ HashMap is non synchronized and not thread safe.On the other hand, Hashtable is 
  HashMap allows one null key and any number of null values, while Hashtable do not allow null keys and null values in the Hashtable object. hashmap is fast and hashtable is slow
 
 Serializable is the ability to transfering objects across the networks (storing the data from memory to permanent database)
-comparator is a interface used for custom sorting.
+comparator is a interface used for custom sorting.serializable is a just a label for java  that tells java that the class can be written to things like database and files
 
 
 in eclipse while creating new project we use classes/standards(folder name) instead of bin, bcz bin is for a windows standard ,but classes used to store the byte bytecode  
@@ -478,7 +478,7 @@ It will look for no argument constructor
 @component is used when we have .java and spring will create and manage the object
 Whenever a object manages other objects it is called as containing ex: Applicationcontext(interface)
 Primary container/hierarchy of spring: beanFactory(core container , dont support AOP ) ApplicationContext(advanced container with more feature, does support AOP)-WebWpplicationContext (support webApplication development )
-AOP: aspect oriented program
+AOP: aspect oriented program( it is a programming style)..AOP isolates the concerns of your application, reduces code clutter, and improves the maintainability and readability of your code.
 bean names: when we have two or more beans of same datatype
 @bean is only used on top of the method , not constructor or class
 @Value: to initialise the variable in string litteral here it can be loaded from outside class or file
@@ -510,6 +510,11 @@ Server: is a computer which serves the resources
 Servlet- is a interface or a small java program which runs on web server
 servlet hierarchy --- Servlet(5 methods)--->1.GenericServlet(one abstract method
                                             2.HttpServlet(no abstract methods) it better a subclass to extend this
+Servlet init() Method. The servlet container only calls the init() method once in a servlet operation. ...
+Servlet service() Method. ...
+Servlet getServletConfig() Method. ...
+Servlet getServletInfo() Method. ...
+Servlet destroy() Method.											
 200 code when resource is available 
 404 : when resources is not available 
 500:issues in resource 
@@ -637,6 +642,36 @@ When we use JPA we can change vendor without changing the code.
 Controller knows only dto
 Repository knows only entity 
 Service knows both
+Orm: javax.persistence 
+Component has many parts like : controller,service, repository, entity
+Components of JPA: persistence,EntityManagerFactory(I), EntityManager
+Components of EntityManager:entityTransaction, Query,criteria 
+Persistence: method createEntityManageFactory- this method look for META-INF/persistence.xml, it will look for unit name,create entity manager factory( use of persistence.xml to create entitymanagerfactory)
+We can use one xml file and connect multiple database
+Properties of Persistence: driver,url,user,password,dialect,showSql,formatSql
+entitymanagerfactory(heavy component )is a information of unit of persistence and try to configure and connect to the data base, EMF will create and manage connection pool(memory, it is a interface, java.sql.connection will represent the db)
+EMF will create the EntityManager( it create n number of EM)
+EM is used to perform CRUD operation( in db :insert,select,update,delete) EM can perform operations on multiple table.
+Em will create entityTransaction,Query,Criteria 
+Transaction is needed whenever u want to save data permanently(save and read=write ), for only reading transactions is not needed(optional), for this there is a find method, to update use merge method(update), to delete use remove method all these done using the Id 
+Query: needed for sql and jql ,Query wil not do insert
+Criteria: to get results without writing query , it will do select without sql
+CreateNamedQuery; to create query ,this needs a entityManger component 
+Close();
+getCriteriaBuilder: to create criteria 
+persist();- to insert 
+commit(); to save
+Jpa write a query when we invoke the persist method. Jpa convert object into values
+Jar packaging : for standAlone java project
+war packaging: for Dynamic java project
+@GenerateValue(strategy=generatetype.Identity)to make java to ignore id values
+In namedquery we should not hardcore the values , it should be set at runtime
+Close(); to release the the EM back connection pool otherwise it will leads to resource leakage 
+hikari used to manage the connection pool ( increasing or decreasing)
+If there is a exception, close(); will not released , so close(); is used within the finally block
+We should always release the manager back to connection pool
+LocalContainerEntityManagerFactoryBean-it will create EMF with customised ,
+Datasource : to connect the DB without persistence.xml , it is more user friendly
 
 Spring MVC is request driven framework and one of the core components of the Spring framework.
 It comes with ready to use loosely coupled components and elements that greatly aids developers in building flexible and robust web applications.
@@ -645,6 +680,148 @@ DispatcherServlet  handles all the HTTP requests and responses.
 The default ViewResolver used in Spring MVC is InternalResourceViewResolver
 @Autowired annotation is meant for the injection of a bean by means of its type along with methods and fields.
 
+POJO stands for Plain Old Java Object. It is an ordinary Java object, not bound by any special restriction other than those forced by the Java Language Specification and not requiring any classpath. POJOs are used for increasing the readability and re-usability of a program..
+POJO class cant extend any other classes,cant implement any interfaced,and wont use outside annotation
+POJO is a simple class with no extra stuff,it is a class which is used on its own
+POJO and JavaBean difference:java bean has no args constructor,properties must be private,getter setters,must be serializable.
+A JavaBean is a Java class that should follow above criteria.
+
+Boilerplate code=In computer programming, boilerplate code, or simply boilerplate, are sections of code that are repeated in multiple places with little to no variation.
+
+Generics offer you the ability to have one class which is flexible for many datatypes.generics dont work with primitive types
+object type should not used it will cause type safety issues n we may get classcasteExceptions
+in generics T can Extend other class and can specify the type
+wild cards in generics =<?> by passing the question mark as parameter which is called as wild card 	it is used when u dontknow that generic type what exactly it is
+Bounded WildCards when one generic type extends other in wild card
+
+Lambda Expression=it is used with only certain type of interface
+Lambda is a short cut to define an implementation of a Functional interface
+	 * in lambda compiler knows return type automatically,in this access specifier
+	 * is not need and dont need the method name
+	 * () is not needed for single parameter
+	 * Lambdas can be only used in the context of Functional interface
+	 * if interface has more than one abstract methods ,we cant use lambda expression
+	 * In Lambda we are ony able to define the implementation of one method
+	 
+Java Anonymus class:
+
+Why string is immutable...?:reasons ->to save the java memory,for security reason,,for thread safe	 
+
+Optional:it is a datatype used to improve the readability and to avoid nullpointer exception
+Java 8 features: lambda, FI, default methods,for each methods, stream,optional, executors,method reference 
+Optional has 3 static methods: Of,Ofnullable and empty
+Of methods is used when we return reference
+Ofnullable : ref is there or not there
+Optinal is mainly done to improve the readability 
+
+Thread’s:thread is a inbuilt object , it is also a class which helps in parallel execution of methods , it depends upon OS and scheculer
+Path: java.lang
+Without threat Jvm cannot exits 
+Jvm will always create a thread , then thread creates a stack
+Thread. slepp(); to pause the thread(in miliseconds)
+Programs are always executed in thread
+Thread is created only in one way
+2 ways to execute thread: by Thread and Runnable (implement)
+Writing a thread and execution of thread is different 
+To write a thread : create a class and extend it by Thread and override run method, in run methods we write all logics to executable in parallel, run method is from runnable
+to execute thread : thread.start(); 
+Garbage collector is called as daemon thread , it will run in background 
+Runnable is a fictional interface which is implemented by Thread 
+There is no guarantee when run method will execute and end , jvm will call the run method
+Producer consumer problem uses thread
+States of thread 
+Synchronized : making only one thread execute the given method at a particular time , it is used with the method declaration and put there a Lock(Monitor)
+Stringbuffer is a synchronised
+Synchronized blocks 
+Deadlock : when we lock method permanently
+Hierarchy: Runnable—> Thread—>subclass 
+Thread life cycle: new—runnable—running—(sleep,wait,suspend) —terminated 
+Synchronized block(sync {}) will written when we dont have a Synchronized method , block will allow to write method in it
+Executor:
+
+transient is a variables modifier used in serialization. At the time of serialization, if we don't want to save value of a particular variable in a file, then we use transient keyword. When JVM comes across transient keyword, it ignores original value of the variable and save default value of that variable data type.
+
+Scope: it is to configure spring to create and manage the instance.
+it is number of instances, by default spring will create one instance bcz it follows singleton pattern,@scope will create multiple instances .@scope(“prototype ”)- for multiple instances, it will create using reference ( autowored or getBean)
+@scope(“singleton”)- it is a default scope.
+If it is prototype , then it will not pre-destroy and it will not complete the bean cycle.
+Singleton scope will complete the bean cycle , it will predestroy method
+jhipster- to create the entire project automatically 
+5 scopes: singleton, prototype,request(web application ,created per request ),session(web application ,created per session ),global 
+Code redundancy/ code duplicate 
+
+Postman is a standalone software testing API (Application Programming Interface) platform to build, test, design, modify, and document APIs. It is a simple Graphic User Interface for sending and viewing HTTP requests and responses.
+
+Restful Web Services is a stateless client-server architecture where web services are resources and can be identified by their URIs. REST Client applications can use HTTP GET/POST methods to invoke Restful web services.
+
+Microservices are an architectural style that develops a single application as a set of small services. Each service runs in its own process. The services communicate with clients, and often each other, using lightweight protocols, often over messaging or HTTP.
+
+A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result. 
+
+ *set,unlike list will not follw the instertion order 
+ * dont allow the duplicates
+ * with set we cant remove the element by using the index number unlike list
+ * set maintains the uniquness via the hascode for each element and this set implementation uses hashTable as
+ * its storage mechanism behind the scence
+ •	Maintain unique elements by overriding equals & hashCode
+ * Treeset-for natural ordering ()ascending  default
+ * why to use hasSet over TreeSet bcz hash set is way faster than tree set
+ * tree set used only when we care about ordering the elements
+ * LinkedHasSet-it doesnt maintain natural order but it maintains the insertion order
+
+AWS Notes-
+Amazon Web Services (AWS) is the world's most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally.
+it is a global cloud platform which allow u to host and manages service in internet.
+it is used by 80% of fortune 500 countries.
+3 basic types of services=compute(control and manage application),storage and newtworking
+it provides infrastructure,software and platform services.
+
+
+Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2's simple web service interface allows you to obtain and configure capacity with minimal friction.
+
+Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. You can use Amazon S3 to store and retrieve any amount of data at any time, from anywhere.
+
+Amazon Relational Database Service (Amazon RDS) is a collection of managed services that makes it simple to set up, operate, and scale databases in the cloud.
+Since RDS automatically manages time-consuming tasks such as configuration, backups, and patches, you can focus on building your application. Amazon EC2 cloud computing platform lets you create as many virtual servers as you need. You should manually configure security, networking and manage the stored data.
+
+AWS Elastic Beanstalk automates the details of capacity provisioning, load balancing, auto scaling, and application deployment, creating an environment that runs a version of your application. You can simply upload your deployable code (e.g., WAR file), and AWS Elastic Beanstalk does the rest.
+
+Rest API-Representational State Transfer,it is a standardised software architectural style
+communication of client and server,restfull
+benefits- simple/standardised,these are scalable and stateless which we can modify,high performance.
+
+AbstractAnnotationConfigDispatcherServletInitializer is a base class to initialize Spring application in Servlet container environment. It's an extension of WebApplicationInitializer(Interface).
+
+MVC-architecture:
+•	When tomcat server starts looks for class implementing web-application-initializer for creating object
+•	web-application-initializer create object for DispatcherServlet & web-application-context(spring container)
+•	web-application-context registered with DispatcherServlet – HAS-A relationship
+•	DispatcherServlet registered with tomcat - HAS-A relationship
+•	web-application-context creates 3 objects before registering DispatcherServlet  –
+1)	components/controller
+2)	handler-mapping
+3)	viewResolver
+•	getServletConfigClasses – helps spring container to create object of component
+•	listener – getRootConfigClasses,contextLoaderListener event connected to object to give response
+•	getServletMappings – mapping action to DispatcherServlet, “/”denotes action
+•	ConfigurerDefaultServletHandling – enabling server to handler static resources like html,css, ‘super’ keyword here for to call default keyword methods particular interface
+•	DispatcherServlet  manages 3 components – helper components
+1)	Handler-mapping –
+o	Interface
+o	Purpose is to find controller in springmvc by scanning key which is used to be same as url if not gives 404
+o	If key & url matches handler-mapping sends controller-name(value) to DispatcherServlet  which involves @GetMapping/@PostMapping
+2)	Controller – 
+o	Process the request by looking towards @requestParameter/DTO
+o	Page-name is the response from controller to DispatcherServlet  
+3)	ViewResolver – 
+o	DispatcherServlet consults this to give page-name & try to find file which gives back to DispatcherServlet
+o	Puts “.jsp” to page-name(ex index.jsp)
+•	viewResolver bean in configuration avoids extension – InternalResourceViewResolver
+
+"/" is given in viewResolver to find the path of the jsp file.
+JPA and Spring are integrated via the localEntityManagerFactoryBean which will create entityManager. 
+Compiler knows there is a exception by looking throws keyword in methods.
+server creates a DispatcherServlet by loooking the webInit class which extends AbstractAnnotationConfigDispatcherServletInitializer.
 
 
 

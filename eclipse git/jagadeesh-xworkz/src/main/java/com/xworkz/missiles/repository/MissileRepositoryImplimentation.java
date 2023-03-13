@@ -89,4 +89,19 @@ public class MissileRepositoryImplimentation implements MissileRepository {
 		}
 	}
 
+	@Override
+	public List<MissileEntity> list() {
+		EntityManager manager = this.entityManagerfactory.createEntityManager();
+		try {
+			Query query = manager.createNamedQuery("list");
+			List<MissileEntity> list = query.getResultList();
+			list.forEach(e -> System.out.println(e));
+			System.out.println("list details" + list.size());
+			return list;
+
+		} finally {
+			manager.close();
+		}
+       //return MissileRepository.super.list();
+	}
 }

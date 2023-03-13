@@ -22,4 +22,8 @@ public interface MissileRepository {
 	}
 
 	boolean deleteById(int id);
+
+	default List<MissileEntity> list() {
+		return Collections.emptyList();
+	}
 }

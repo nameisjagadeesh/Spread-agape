@@ -26,8 +26,12 @@
 			</a>
 			<a href="missiles">MissileDetails</a>
 			<a href="SearchByName.jsp">SearchByName</a>
+			<a href="list">Missile List</a>
 		</div>
 	</nav>
-    <h1 style="color: blue;">Well Come Indians to The Missile Information.....!</h1> 
+    <h1 style="color: blue;">Well Come Indians to The Missile Information.....!</h1>
+    
+     
+    <img alt="Missiles" src="https://prd-sc101-cdn.rtx.com/-/media/rmd/what-we-do/air-warfare/air-to-air-missiles/peregrine-missile/2020-01/images/peregrine-hero-lg.jpg?rev=ba1fde2470b74a98949ca46d21051f48" width="1300" height="500">
 </body>
 </html>

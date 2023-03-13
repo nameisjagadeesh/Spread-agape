@@ -114,4 +114,25 @@ public class MissileServiceImplimentaion implements MissileService {
 		return true;
 	}
 
+	@Override
+	public List<MissileDto> list() {
+		List<MissileEntity> list=this.missileRepository.list();	
+		List<MissileDto> dtoList=new ArrayList<>();
+		if(list!=null && !list.isEmpty()) {
+			for (MissileEntity entity : list) {
+				MissileDto dto=new MissileDto();
+				BeanUtils.copyProperties(entity, dto);
+				dtoList.add(dto);
+			}
+			System.out.println("size of dto in service"+dtoList.size());
+			System.out.println("size of list in service"+list.size());
+			return dtoList;
+		}
+		else {
+			System.out.println("no data is found in the dto");
+			return Collections.emptyList();
+		}
+		
+	}
+
 }

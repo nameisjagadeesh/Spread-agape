@@ -12,6 +12,7 @@ import lombok.Data;
 @Entity
 @Table(name = "missile_table")
 @NamedQuery(name = "findByName" ,query = "select str from MissileEntity str where str.name=:na")
+@NamedQuery(name = "list",query = "select ent from MissileEntity ent")
 public class MissileEntity {
 
 	@Id

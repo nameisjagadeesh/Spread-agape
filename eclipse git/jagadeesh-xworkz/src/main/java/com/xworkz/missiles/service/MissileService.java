@@ -25,4 +25,8 @@ public interface MissileService {
 	}
 
 	boolean deleteById(int id);
+	
+	default List<MissileDto> list(){
+		return Collections.emptyList();
+	}
 }

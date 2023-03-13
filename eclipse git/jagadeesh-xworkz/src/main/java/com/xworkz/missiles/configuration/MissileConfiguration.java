@@ -21,9 +21,8 @@ public class MissileConfiguration {
 		return new InternalResourceViewResolver("/", ".jsp");
 	}
 
-	@Bean
+	@Bean //by this spring and jpa are integrated
 	public LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean() {
-
 		System.out.println("running LocalContainerEntityManagerFactoryBean");
 		return new LocalContainerEntityManagerFactoryBean();
 	}

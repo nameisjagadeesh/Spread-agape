@@ -8,9 +8,9 @@ public class StringData {
 		String str3=new String("aBC"); //here stored in instance memory
 		
 		System.out.println(str1==str2); //true
-		System.out.println(str1==str3); //false
-		System.out.println(str1.equals(str3)); // false it will check content
-		System.out.println(str1.equalsIgnoreCase(str3)); // false it will check content
+		System.out.println(str1==str3); //false,bcz both reference pointing to separate strings
+		System.out.println(str1.equals(str3)); // false ,it will check content
+		System.out.println(str1.equalsIgnoreCase(str3)); // true, it will check content
 
 
 

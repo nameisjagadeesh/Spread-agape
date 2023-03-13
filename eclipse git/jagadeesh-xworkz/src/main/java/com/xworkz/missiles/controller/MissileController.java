@@ -105,5 +105,17 @@ public class MissileController {
 		}
 		return "MissileUpdate";
 	}
+	
+	@GetMapping("/list")
+	public String onMissileList(Model model) {
+		List<MissileDto> list=this.missileService.list();
+		if(list!=null && !list.isEmpty()) {
+			model.addAttribute("list", list);
+		}
+		else {
+			model.addAttribute("failed", "no data exist ,database is empty");
+		}
+		return "MissileList";
+	}
 
 }
