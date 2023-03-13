@@ -20,7 +20,7 @@ public class JDBCRunner {
             String delete="delete from missile_table where id='5'";
             String delete1="delete from missile_table where id='6'";
             
-            		//DELETE FROM  movies WHERE movie_name='lagn';
+            //DELETE FROM  movies WHERE movie_name='lagn';
             		
             		
 			Statement statement=connection.createStatement();
