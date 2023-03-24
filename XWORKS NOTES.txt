@@ -461,38 +461,38 @@ it is Project management tool
 It will be used to download the jar (libraries) files
 Dependency are jar files from maven.
 
-Spring
+Spring-
 It is a framework , framework is a solution to common problems
 Spring is not about coding its about configuration 
 Spring is mainly used to manage objects 
-Manage: create, initiate, destroy 
+Manage: create, initiate, destroy (CID)
 Bean is a object which is managed by spring 
 Meta -info : is a data of external systems 
 Meta-info~~ spring~~ bean
-@configuration: making class as to provide configuration which passes the meta infor
+@configuration: making class as to provide configuration which passes the meta information
 @component: mark so that spring can manage object and create instances.
 It will look for no argument constructor
 @componetscan: to scan the component in perticular package , after that it will create instances  , it should be in configuration class
 @bean is used when we have only .class files where u have to create class and spring will manage the object
 @bean will register an object
 @component is used when we have .java and spring will create and manage the object
-Whenever a object manages other objects it is called as containing ex: Applicationcontext(interface)
-Primary container/hierarchy of spring: beanFactory(core container , dont support AOP ) ApplicationContext(advanced container with more feature, does support AOP)-WebWpplicationContext (support webApplication development )
+Whenever a object manages other objects it is called as container ex: Applicationcontext(interface)
+Primary container/hierarchy of spring: beanFactory(core container , dont support AOP ) ApplicationContext(advanced container with more feature,  support AOP)-WebWpplicationContext (support webApplication development)
 AOP: aspect oriented program( it is a programming style)..AOP isolates the concerns of your application, reduces code clutter, and improves the maintainability and readability of your code.
 bean names: when we have two or more beans of same datatype
 @bean is only used on top of the method , not constructor or class
 @Value: to initialise the variable in string litteral here it can be loaded from outside class or file
 It is used only for primitive, string n wrapper classes ,not for custom types
 When we use java literals initialisation in spring (=“”) it will be hardcoded and cant load from outside class (file)
-@value cant be used within the method and over the @ban
-GetBean method: needs ref of container 
+@value cant be used within the method and over the @bean
+GetBean method: needs ref of container
 AutoWired method : needs component @autowired is annotation to get the ref of other bean managed by spring, it also initialise the bean of custom type
 @Qualifier:to refer a bean by name 
 tostring will loop and access the references
 Spring is designed by following IOC(inversion of control) where the task is done by third party
 IOC: Inverting the managing  of object via spring
 DI: Dependency Injection , it is different from maven dependency 
-It is getting the ref of an bject
+It is getting the ref of an object
 It is done 2 ways : by property and constructor and also with setter
 M2 folder in maven project is a repository 
 $ in maven is a expression language
@@ -550,7 +550,7 @@ Requestparameters: url ? parameternames
 ? It will separate the url and parameters 
 Backward compatibility:
 Server lifecycle: initi , service, destroy methods
-Service starts when req is send 
+Service starts when req is sent
 Destroy called once when we shuttdown the server 
 Init method to : to initiate the resource of servlet
 Destroy method: to clear the resource of servlet
@@ -558,7 +558,7 @@ Req parameters: data we send to back
  
 
 
-get method :carried in URL ,limited data(2020 characters ) ,it will load a resource
+get method :carried in URL ,limited data(2020 characters )1mb ,it will load a resource
 post method: carried in body ,un-limited data create the data send the data
 JSP: Java Server Pages—-> html+ java
 Jsp is a format which allows to write java , 
@@ -823,12 +823,43 @@ JPA and Spring are integrated via the localEntityManagerFactoryBean which will c
 Compiler knows there is a exception by looking throws keyword in methods.
 server creates a DispatcherServlet by loooking the webInit class which extends AbstractAnnotationConfigDispatcherServletInitializer.
 
+SQL injection is a code injection technique that might destroy your database. SQL injection is one of the most common web hacking techniques. SQL injection is the placement of malicious code in SQL statements, via web page input.
+SQL Injection Based on OR ""="" is Always True
 
+Tight coupling is not good bcz it reduces the flexibility and reusability of the code and it makes changes much more difficult
 
+JIT(Just In time) Compiler helps improve the performance of Java programs by compiling bytecodes into native machine code at run time.it will reduce the required time to recompilation
 
+types of classloader -bootstrap class loader(loads rt.jar files) ,extention class loader(child of bootstrap CL ,it will loads the jar files located in lib.extn directory),application/system class loader (child of extension CL ,it will load the class of class room)
 
+class should have default constructor to be serialized
+Static methods in interafce is to write some utility codes and directly called without creating the object
+Spring RestController annotation is a convenience annotation that is itself annotated with @Controller and @ResponseBody . This annotation is applied to a class to mark it as a request handler. Spring RestController annotation is used to create RESTful web services using Spring MVC.no need of writting explicitly the responsibilsity
 
+Cat myCat=null;  -----> null pointer exception(unchecked exception)
+mycat.makeNoise();
 
+try{
+in this we write any code that might cause the exception
+}
+catch(){
+use to catch those types of exception and then write any code we want to execute whenever that type of exception
+this block will use exceptional heirarchy and will catch those exeption we declared in that block,to catch any type declare as Exception
+}
+catch(NumberFormatException | NullPointerException){ to catch multiple exception
+}
+return statement in finally will override the return statement of try,finally is used in database call or some file input output ,whenever we want to close the connection to database or stream
 
+Checked exception is checked at compile time -handle this by throws or surround with try catch block
+all sub classes of RuntimeException are unchecked exception.
+
+Super Keyword-it is used to access things from superclasses - super.makenoise();
+super is used when you specifically want the parent classes implementation of method that we overridden in subclass
+super is used only inside a class to refer its parent classes
+super cant be used to access the private methods
+it is used to chaining and avoid code duplication
+super must be the first thing....
+
+This keyword-it is not used in the static conext,used to call another constructor(should be first line)
 
 

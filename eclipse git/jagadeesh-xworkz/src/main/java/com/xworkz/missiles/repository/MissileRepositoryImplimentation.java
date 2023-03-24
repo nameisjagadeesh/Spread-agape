@@ -102,6 +102,21 @@ public class MissileRepositoryImplimentation implements MissileRepository {
 		} finally {
 			manager.close();
 		}
-       //return MissileRepository.super.list();
+		// return MissileRepository.super.list();
+	}
+
+	@Override
+	public List<MissileEntity> findByTwoProperties(String name, String company) {
+		EntityManager manager = this.entityManagerfactory.createEntityManager();
+		try {
+			Query query = manager.createNamedQuery("lists");
+			query.setParameter("nby", name);
+			query.setParameter("cby", company);
+			List<MissileEntity> list = query.getResultList();
+			System.out.println("list details" + list.size());
+			return list;
+		} finally {
+			manager.close();
+		}
 	}
 }

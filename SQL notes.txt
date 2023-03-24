@@ -6,6 +6,8 @@ APIs perform=Post,get,put,delete(CRUD operation)
 presentation layer and business layer connected through http api
 business layer and datalayer connected through JDBC,Hibernate(or by writing the SQL to communicate with database)
 json=java script object notation
+JSON is a format for storing and transporting data. JSON is often used when data is sent from a server to a web page.
+JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications. 
 client(laptop) will send request to server to respond the request
 mysql=1995
 DATABASE =organised collection of data ,these are collected in rows and coloumns i.e TABLES
@@ -79,9 +81,9 @@ The schema represents the logical structures of data. Using schemas, the databas
 https://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@github.com/nameisjagadeesh/SQL-repo-.git..
 
 TCL(Transaction Control Language)=TCL commands are basically used for managing and controlling the transactions in a database to maintain consistency. And it also helps a user manage all the changes made by the DML commands for maintaining its transactions.
- COMMIT(permanent delete which will not rollback),
+COMMIT(permanent save/delete which will not rollback),
 ROLLBACK,SAVEPOINT(to roll back used to mark the table);
-
+In DBMS, the data is stored as a file, whereas in RDBMS, data is stored in the form of tables.
 
 
 

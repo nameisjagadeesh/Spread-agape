@@ -25,8 +25,12 @@ public interface MissileService {
 	}
 
 	boolean deleteById(int id);
-	
-	default List<MissileDto> list(){
+
+	default List<MissileDto> list() {
+		return Collections.emptyList();
+	}
+
+	default List<MissileDto> findByTwo(String name, String company) {
 		return Collections.emptyList();
 	}
 }

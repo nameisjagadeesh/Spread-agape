@@ -24,7 +24,7 @@ public class MapAndHashMap {
 		System.out.println("ONLY values"+ids.values());
 		System.out.println("ONLY KEYS"+ids.keySet());
 		System.out.println("both KEYS and values"+ids.entrySet());
-		System.out.println(ids.get("jagadeesh")); //to get perticuler values
+		System.out.println(ids.get("jagadeesh")); //to get particular values
 		
 		System.out.println("!!~~~~~~~~~~!!");
 		ids.put("jagadeesh", 2834);

@@ -26,4 +26,8 @@ public interface MissileRepository {
 	default List<MissileEntity> list() {
 		return Collections.emptyList();
 	}
+
+	default List<MissileEntity> findByTwoProperties(String name, String company) {
+		return Collections.emptyList();
+	}
 }

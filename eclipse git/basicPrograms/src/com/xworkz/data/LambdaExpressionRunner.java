@@ -9,7 +9,7 @@ public class LambdaExpressionRunner {
 	 * () is not needed for single parameter
 	 * Lambdas can be only used in the context of Functional interface
 	 * if interface has more than one abstract methods ,we cant use lambda expression
-	 * In Lambda we are ony able to define the implementation of one method
+	 * In Lambda we are only able to define the implementation of one method
 	 * 
 	 */
 

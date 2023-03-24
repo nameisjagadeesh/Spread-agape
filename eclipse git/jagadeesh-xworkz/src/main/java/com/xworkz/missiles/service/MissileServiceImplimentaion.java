@@ -116,23 +116,42 @@ public class MissileServiceImplimentaion implements MissileService {
 
 	@Override
 	public List<MissileDto> list() {
-		List<MissileEntity> list=this.missileRepository.list();	
-		List<MissileDto> dtoList=new ArrayList<>();
-		if(list!=null && !list.isEmpty()) {
+		List<MissileEntity> list = this.missileRepository.list();
+		List<MissileDto> dtoList = new ArrayList<>();
+		if (list != null && !list.isEmpty()) {
 			for (MissileEntity entity : list) {
-				MissileDto dto=new MissileDto();
+				MissileDto dto = new MissileDto();
 				BeanUtils.copyProperties(entity, dto);
 				dtoList.add(dto);
 			}
-			System.out.println("size of dto in service"+dtoList.size());
-			System.out.println("size of list in service"+list.size());
+			System.out.println("size of dto in service" + dtoList.size());
+			System.out.println("size of list in service" + list.size());
 			return dtoList;
-		}
-		else {
+		} else {
 			System.out.println("no data is found in the dto");
 			return Collections.emptyList();
 		}
-		
+
+	}
+
+	@Override
+	public List<MissileDto> findByTwo(String name, String company) {
+		List<MissileEntity> find = this.missileRepository.findByTwoProperties(name, company);
+		List<MissileDto> dto = new ArrayList<>();
+		if(name!=null && !name.isEmpty() || company!=null && !company.isEmpty()) {
+			for (MissileEntity entity : find) {
+				MissileDto missileDto=new MissileDto();
+				BeanUtils.copyProperties(entity, missileDto);
+				dto.add(missileDto);
+			}
+			System.out.println("size"+dto.size());
+			return dto;
+		}
+	
+		else {
+			System.out.println("no data is not found");
+		}
+		return MissileService.super.findByTwo(name, company);
 	}
 
 }
