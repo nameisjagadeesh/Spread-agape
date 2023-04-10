@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-    
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Xworkz</title>
+<title>X-Workz</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -23,19 +22,19 @@
 			<a class="navbar-brand" href="#"> <img
 				src=" https://x-workz.in/static/media/Logo.cf195593dc1b3f921369.png"
 				alt="" width="80" height="48" class="d-inline-block align text-top">
-			</a>
-			<a href="missiles">MissileDetails</a>
-			<a href="SearchByName.jsp">SearchByName</a>
-			<a href="list">Missile List</a>
-			<a href="findByTwo">FindByNameAndCompany</a>
-			<a href="FileUpload.jsp">Upload Image</a>
-			<a href="Display.jsp">Display Image</a>
-			<a href="Ajax.jsp">Ajax Data</a>
+				
 		</div>
 	</nav>
-    <h1 style="color: blue;">Well Come Indians to The Missile Information.....!</h1>
-    
-     
-    <img alt="Missiles" src="https://prd-sc101-cdn.rtx.com/-/media/rmd/what-we-do/air-warfare/air-to-air-missiles/peregrine-missile/2020-01/images/peregrine-hero-lg.jpg?rev=ba1fde2470b74a98949ca46d21051f48" width="1300" height="500">
+	<nav class="navbar navbar-expand">
+		<div class="container-fluid">
+			<a href="signUp.jsp"><span class="glyphicon glyphicon-user"></span>
+				Sign Up</a> <a href="SignIn.jsp"><span
+				class="glyphicon glyphicon-log-in"></span> Login</a>
+				
+		</div>
+	</nav>
+
+   <h3 style="color: blue">${update}</h3>
+	<h1 style="color: blue;">PASSWORD  UPDATED SUCESSFULLY</h1>
 </body>
 </html>

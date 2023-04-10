@@ -28,6 +28,7 @@ developers writes source code
 PLATFORM INDEPENDENT, IS JAVA COMPILED CODE (BYTE CODE) CAN RUN ON ALL OS
 Datatype is a set of values and set of operations defined on those values .It defines what type of data and the size of data that is stored in a variable. ex=int size=56;
 Variables are containers which stores the values. or variables are ref which points to the memory
+The double colon (::) operator, also known as method reference operator in Java, is used to call a method by referring to it with the help ..
 
 JAVA IS OBJECT ORIENTED PROGRAMMING LANGUAGE,JAVA REPRESENTS REAL WORLD
 OBJECT/class/things HAS STATES(DATA) AND BEHAVIOUR(ACTION)
@@ -48,9 +49,10 @@ output in java is information
 use of writing program is to represent object ,
 data=is variable.> ways/types=static,instance,local,parameter ,data is use to store data
 declaring a variable=datatype refname(value)ex: Pizza pizza;
-initialise a variable=by adding ;(semicolon which means end of statemnet)
+initialise a variable=by adding ;(semicolon which means end of statemnet) 
 datatype in java are 2 types =premitive n non premitive, premitive is to denote values, non primitive to compex value
 types of primitive parameter(java dataypes)=byte ,short ,int , long ,float ,double, boolean, char
+
 
 non primitive =any class we write is non premitive ,types=countless
 any class will  have state and behaviour
@@ -105,8 +107,6 @@ constructor is a special mathod ,it is same as class name ex:Bike() or Bike();
 constructor has no return type
 constructor used with new key word
 compiler will provides no-argument constructor
-public Gold(){} is constructor type
-public void Gold(){} is method type -instance method
 instantiation is initiating the non primitive,it is making copies in instance memory
 initialisation for primitive instance variables,instance creates many copies
 
@@ -127,8 +127,7 @@ this. is a keyword used when instance variable names and local variable names ar
 this. keyword used in variable,methods,constructor
 c programing language was developed by Dennis Richie
 constructor chaining=when one constructor calls another constructor 
-A copy constructor in a Java class is a constructor that creates an object using another object of the same Java class.
-ex of copy constructor= constructor1{}        constructor2(){constructor1}
+
 
 types of chaining=super(default/implicit::when calling from parent class) and this(calling from same class)
 class level variable=static and non static
@@ -630,7 +629,7 @@ JDBC (Java database connectivity) it is a API which connect java and database
 Package: java.sql
 We need interfaces and implementation of vendor jar files to connect to database.
 Issues with JDBC: data is always in the form of object, JDBC understands only queries(sql) bcz objects has is-a and has-a relation where as jdbc has primary key and foreign key relation, cant store DTO directly to DB, we have to convert object in values,
-to over come this ,JPA used  which will convert object of java to values and stores in DB
+to over come this ,JPA(java parsistence API) used  which will convert object of java to values and stores in DB
 JPA will store and retrieve values from DB
 ORM- object relation mapping .it is a guideline to map object to relational model.
 Hibernate is a community to save object to DB .anybody solves 5 problems will be called ORM tool ex: Mybatis,Toplink,eclipselink
@@ -701,7 +700,7 @@ Lambda is a short cut to define an implementation of a Functional interface
 	 * () is not needed for single parameter
 	 * Lambdas can be only used in the context of Functional interface
 	 * if interface has more than one abstract methods ,we cant use lambda expression
-	 * In Lambda we are ony able to define the implementation of one method
+	 * In Lambda we are only able to define the implementation of one method
 	 
 Java Anonymus class:
 
@@ -753,6 +752,11 @@ Code redundancy/ code duplicate
 Postman is a standalone software testing API (Application Programming Interface) platform to build, test, design, modify, and document APIs. It is a simple Graphic User Interface for sending and viewing HTTP requests and responses.
 
 Restful Web Services is a stateless client-server architecture where web services are resources and can be identified by their URIs. REST Client applications can use HTTP GET/POST methods to invoke Restful web services.
+Every content in the REST architecture is considered a resource. The REST Server provides access to these resources whereas the REST client consumes (accesses and modifies) these resources. Every resource is identified globally by means of a URI
+
+
+
+
 
 Microservices are an architectural style that develops a single application as a set of small services. Each service runs in its own process. The services communicate with clients, and often each other, using lightweight protocols, often over messaging or HTTP.
 
@@ -786,7 +790,7 @@ Since RDS automatically manages time-consuming tasks such as configuration, back
 
 AWS Elastic Beanstalk automates the details of capacity provisioning, load balancing, auto scaling, and application deployment, creating an environment that runs a version of your application. You can simply upload your deployable code (e.g., WAR file), and AWS Elastic Beanstalk does the rest.
 
-Rest API-Representational State Transfer,it is a standardised software architectural style
+Rest API-(Representational State Transfer),it is a standardised software architectural style
 communication of client and server,restfull
 benefits- simple/standardised,these are scalable and stateless which we can modify,high performance.
 
@@ -828,7 +832,7 @@ SQL Injection Based on OR ""="" is Always True
 
 Tight coupling is not good bcz it reduces the flexibility and reusability of the code and it makes changes much more difficult
 
-JIT(Just In time) Compiler helps improve the performance of Java programs by compiling bytecodes into native machine code at run time.it will reduce the required time to recompilation
+JIT(Just In time) Compiler helps improve the performance of Java programs by compiling bytecodes into native machine(other than java like C n C++) code at run time.it will reduce the required time to recompilation
 
 types of classloader -bootstrap class loader(loads rt.jar files) ,extention class loader(child of bootstrap CL ,it will loads the jar files located in lib.extn directory),application/system class loader (child of extension CL ,it will load the class of class room)
 
@@ -836,7 +840,7 @@ class should have default constructor to be serialized
 Static methods in interafce is to write some utility codes and directly called without creating the object
 Spring RestController annotation is a convenience annotation that is itself annotated with @Controller and @ResponseBody . This annotation is applied to a class to mark it as a request handler. Spring RestController annotation is used to create RESTful web services using Spring MVC.no need of writting explicitly the responsibilsity
 
-Cat myCat=null;  -----> null pointer exception(unchecked exception)
+Cat myCat=null; ------> null pointer exception(unchecked exception)
 mycat.makeNoise();
 
 try{
@@ -861,5 +865,168 @@ it is used to chaining and avoid code duplication
 super must be the first thing....
 
 This keyword-it is not used in the static conext,used to call another constructor(should be first line)
+System.getProperty.
+
+Public Static void main(String[] args)
+JRE has to call main method to trigger the program (MainMethodExplanatin.main(args))
+public-method has to be callable by something outside of the class 
+static-method can be called on a class without needing an instance of that class
+void -return type main method doesnt return anything,no neeed 
+main-method name
+String[] args-sop(arg[0]) -it is used to hold the command line argument in the form of string values.
+
+Upcasting-when u take an object and cast it to its superclass type i.e parent type ,it works automatically (wide casting)
+Downcasting- casting it to one of the sub class (narrow casting)
+
+The XMLHttpRequest object can be used to request data from a web server--Update a web page without reloading the page
+Request data from a server - after the page has loaded
+Receive data from a server  - after the page has loaded
+Send data to a server - in the background
+
+AJAX(Asynchronous JavaScript And XML.) is a technique for accessing web servers from a web page
+AJAX is a misleading name. AJAX applications might use XML to transport data, but it is equally common to transport data as plain text or JSON text.
+AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
+The keystone of AJAX is the XMLHttpRequest object.
+The XMLHttpRequest object can be used to exchange data with a server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
+All modern browsers (Chrome, Firefox, Edge (and IE7+), Safari, Opera) have a built-in XMLHttpRequest object.
+Syntax for creating an XMLHttpRequest object:variable = new XMLHttpRequest();
+GET is simpler and faster than POST, and can be used in most cases
+Server requests should be sent asynchronously.
+AJAX can be used for interactive communication with an XML file
+AJAX is used to create more interactive applications,with DB.
+PHP scripts are executed on the web server. This differs from AJAX which is executed on the client-side. 
+The full form of PHP is Hypertext Preprocessor. It was abbreviated previously as Personal Home Page. It is a programming language widely used to build web applications or websites. It is the server-side scripting language encoded with HTML to develop Dynamic website, Static website or Web applications.
+
+" Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."
+
+Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.
+
+JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else
+JS can run inside and outside of the browser n we can pass our js code to node for execution
+ECMAScript is just a specification where as JS is a PL which confirms its specifications
+we can write JS without any additional codes
+
+Jenkins-
+it is a populer continous integration tool that allows countinous development ,test and deployment of newly created codes
+other tools like jenkins-Bamboo,apache group,buildboot,travis circular
+jenkins is the core of devops
+JAVA_HOME contains path of JDK
+continous integration server validates ,passes the test created,it will allow the builder not break the build  and no need to run the all test locally on their computer
+hudson was original product of junkins...
+featurs of jenkins-
+1.easy installation(jenkins is a self contained java based programn ready to run with packages)
+2.easy confugaration(easy set up and configure via its web interface with built in help)
+3.plugins(heart n soul of jenkins) which integrate with every tool in the CI and  CD toolchain
+4.extensible-it is extended via its plugins architecture n fit into the environment
+5.distributed-can easily distribute works across multiple machines
+
+Jenkins Pipeline- code commit-->jenkins will build--test--release env--deploy/deliver realy quickly
+Jenkins architecture- source code repo--jenkins(CI server)--build server(maven)--test server(to execute via selinum)
+jenkins will not allow multple files or builds to be executed on a single server for that we need multiple server env
+
+jenkins master slave architecture/Distributed build-
+jenkins master pulls the code from repos(from git) everytime there is a commit ,here jenkin server acts as the master env which will push out to other multiple slave env to distribute the work flow simultaneously
+slaves will run the diff build versions of the code for diff OS  and server master will control how each of those builds operate.
+jenkin doesn’t know what kind of code it pull in ,build set
+cloudbees is a part of jenkins used by Bosch
+jenkins has bunch of plugins like bigbucket for github,maven,aws,sonarqube(to check the code quality),docker(to run anywhere),ms build
+
+Steps
+install jenkins n link with java path(jdk)
+get plugins 
+create first admin user to complete jenkins
+configuration -using 'manage jenkins'--no of executor--SMTP authorization using gmail to send the mail ,instal plugins like role based authorised strategy ,after this restart jenkins 
+configure global security using own DB or companies,to see the plugin installed after this you will see manage and assign roles like groups(like global,project and slave roles) 
+Save
+new item - to create new job n select the type like pipeline,freestyle n excute commands n save
+build now- to run and console output
+build trigger- to schedule in minutes
+source code management to connect to source code by giving the url ,on behalf of us jenkins go the given url and pulls all the codes and saved in local system
+port number of tomcat and jenkins should not be same to connect each which will create war file
+context path-it is just name of application under which it is get deployed in server
+
+Distributed build-set up slave n delegate job to that
+JNLP-java network launch protocol which helps in communicating the client and server(or communicate master and slave) by enabling (select random)  in agents secton of configure global security and copy the path of slave in remote root directory in Nodes section n give label to identify
+agent.jar-to launch java folder where multiple task can paralley run n represents node
+we can backup using plugins in backup manager in manage jenkins-it can slow down the servers
+
+what is pipeline in jenkins2.0-it is a suite of jenkins which implement and integrate countinous delevery
+'post build action' to link n trigger one job to another ,to visualise  the linking install a plugin called 'delivery pipeline' plugin and create new visualization..
+pipeline can be written groovy script n pipelines return as script 
+in new job select pipeline  n put pipline script
+pipeline syntax which gives script
+2 type of pipeline-scripted(groovy) and declarative(provide simple n friendly syntax to write pipeline)
+pipeline is nothing but configuration
+
+
+Sending mail
+add dependency (javax.mail)
+SMTP(simple mail trasfer protocol) protocol
+host name n port number
+
+
+Design patterns are an essential part of software development. These solutions not only solve recurring problems but also help developers understand the design of a framework by recognizing common patterns.
+Types-
+Singleton pattern-
+Factory Method pattern
+Proxy pattern
+Template pattern
+
+
+Collection is called interface in java whereas Collections is called a utility class in java and both of them can be found in java. util. package. Collection is used to represent a single unit with a group of individual objects whereas collections is used to operate on collection with several utility methods.
+
+
+
+WebService--services deliverd over the web -it is a softeware system designed to support interoperable(platform independent ,whether devolpeb by java ,.net,PHP application) machine to machine intercation(communication over a network) over a network.
+datas are exhanged through request and response
+XML is popular message exchange format for request n response ,same as JSON
+Service Definition- it is contract between service provider and consumer(it will send req/resp format,req structure,resp structure,endpoint.)
+Tranport-it defines how service is called (HTTP and MQ formats)
+MQ-communication over a queue(Web sphere to tranport)
+Groups of webservices
+SOAP(Simple Object Access protocol)-poses poses restriction over XML format between service producer n consumer
+SOAP tells specific way of building webservices,in the XML used as response exchange format,SOAP defines specific XML req n resp ,SOAP doesnt pose any restriction on transport
+SOAP Body-it contains SOAP envelop  which has header(it contains meta info like authentication,signatures,it is optional) and body(it has req n resp)
+in SOAP service definition done by WSDL(Web service definition language) which defines end points of service n where operations are exposed,adding course,deleting
+Structure of WSDL-endpoint,all operation,req service,resp service
+
+Rest-it defines architectural approach,tern coined by Roy fieling,this REST will make best use of HTTP 
+Rest=ajax+http  (methods n status code)
+REST will defines the services using different concept of HTTP that already presend
+resource-Every content in the REST architecture is considered a resource. (/user/jagadeesh/list)
+resource can have XML,HTNL,JSON
+URI- for identifying each resource of the REST architecture.
+format---- <protocol>://<service-name>/<ResourceType>/<ResourceID>
+REST is completely build on HTTP,no standard service defn like WADL/Swagger
+REST vs SOAP- 
+SOAP -its a format of xml,data excahnge is always in XML,standard definition,no restriction on transport(web or MQ),not easier to implement
+REST-architectural style,no strict data exchange format (can be xml,json),no standard defn,transport is done only through HTTP
+, these are easier to implement
+11.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

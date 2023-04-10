@@ -84,7 +84,10 @@ TCL(Transaction Control Language)=TCL commands are basically used for managing a
 COMMIT(permanent save/delete which will not rollback),
 ROLLBACK,SAVEPOINT(to roll back used to mark the table);
 In DBMS, the data is stored as a file, whereas in RDBMS, data is stored in the form of tables.
-
-
+Normalization-it is a process of restructure the datain DB,it will converts the large table into small table n links them by relationships.
+SELECT statement is used to recover data from database.
+Cursor in sql is a temporay memory  in local memory created once sql quiries executed,curser is a set of rows,these are used to store database tables, TYPES-explicit and implicit cursor .
+Relationship is a link between entities that have somthing to do with each other
+SQL index is table used to speed up the search opertaions for datas
 
 
