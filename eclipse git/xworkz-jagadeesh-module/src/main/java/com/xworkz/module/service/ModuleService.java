@@ -43,4 +43,8 @@ public interface ModuleService {
 		return null;
 		
 	}
+	default ModuleDTO profileUpdate(String userId,String email,Long mobile,String path) {
+		return null;
+		
+	}
 }

@@ -400,7 +400,7 @@ Sorting map: use treeMap implementation
 Map doesn’t have stream method
 
 HashMap is non synchronized and not thread safe.On the other hand, Hashtable is thread safe and synchronized.
- HashMap allows one null key and any number of null values, while Hashtable do not allow null keys and null values in the Hashtable object. hashmap is fast and hashtable is slow
+HashMap allows one null key and any number of null values, while Hashtable do not allow null keys and null values in the Hashtable object. hashmap is fast and hashtable is slow
 
 Serializable is the ability to transfering objects across the networks (storing the data from memory to permanent database)
 comparator is a interface used for custom sorting.serializable is a just a label for java  that tells java that the class can be written to things like database and files
@@ -409,7 +409,7 @@ comparator is a interface used for custom sorting.serializable is a just a label
 in eclipse while creating new project we use classes/standards(folder name) instead of bin, bcz bin is for a windows standard ,but classes used to store the byte bytecode  
 
 without initialisation local variable cant be used
-A class is a group of objects which have common properties. It is a template or blueprint from which objects are created. It is a logical entity. It can't be physical.
+A class is a group of objects which have common properties. It is a template or blueprint from which objects are created. It is a logical entity. It can't be physical.,it will not use the memory
 Instance variable doesn't get memory at compile time. It gets memory at runtime when an object or instance is created. That is why it is known as an instance variable.
 
 In java, we have 7 non-access modifiers. They are used with classes, methods, variables, constructors, etc to provide information about their behavior to JVM. They are as follows:static,final,abstract,synchronized,transient,volatile,native
@@ -762,7 +762,7 @@ Microservices are an architectural style that develops a single application as a
 
 A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result. 
 
- *set,unlike list will not follw the instertion order 
+ *set,unlike list wkill not follw the instertion order 
  * dont allow the duplicates
  * with set we cant remove the element by using the index number unlike list
  * set maintains the uniquness via the hascode for each element and this set implementation uses hashTable as
@@ -854,8 +854,8 @@ catch(NumberFormatException | NullPointerException){ to catch multiple exception
 }
 return statement in finally will override the return statement of try,finally is used in database call or some file input output ,whenever we want to close the connection to database or stream
 
-Checked exception is checked at compile time -handle this by throws or surround with try catch block
-all sub classes of RuntimeException are unchecked exception.
+Checked exception is checked at compile time -handle this by throws or surround with try catch block ex-ClassNotFoundException, SocketException, SQLException, IOException, FileNotFoundException
+all sub classes of RuntimeException are unchecked exception ex-NullPointerException, ClassCastException, ArithmeticException, DateTimeException, ArrayStoreException.
 
 Super Keyword-it is used to access things from superclasses - super.makenoise();
 super is used when you specifically want the parent classes implementation of method that we overridden in subclass
@@ -966,11 +966,23 @@ host name n port number
 
 
 Design patterns are an essential part of software development. These solutions not only solve recurring problems but also help developers understand the design of a framework by recognizing common patterns.
+The advantages of design patterns are:To provide standard terminology that everybody understands and Not to repeat the same mistakes over and over again
+
 Types-
 Singleton pattern-
-Factory Method pattern
-Proxy pattern
-Template pattern
+Factory Method pattern-The intent of the Factory Method pattern is to create a family of object types.
+Proxy pattern-A Proxy is an object that represents another object.Your debit card is a proxy for your bank account. Whenever you make a transaction using a debit card, the corresponding money is deducted from the bank account.
+Template pattern-The Template Method pattern is used to defer the exact steps of an algorithm(house construction plan), to a subclass. ex AbstractController 
+The Observer Pattern- The Observer pattern is a way of notifying a change, to a number of classes.
+The Strategy Pattern-The strategy has the task of encapsulating an algorithm inside a class. 
+The State Pattern is used to alter an object’s behavior when its state changes.
+The Iterator pattern-to access those elements sequentially
+A Flyweight pattern represents creating a fine-grained instance, that is being used for efficient sharing
+An Adapter pattern is used to match interfaces of different classes
+A Facade pattern is a single class that represents an entire subsystem.
+The Decorator pattern allows us to add responsibilities to objects, dynamically.
+The Builder Pattern separates object construction from its representation.
+
 
 
 Collection is called interface in java whereas Collections is called a utility class in java and both of them can be found in java. util. package. Collection is used to represent a single unit with a group of individual objects whereas collections is used to operate on collection with several utility methods.
@@ -980,15 +992,15 @@ Collection is called interface in java whereas Collections is called a utility c
 WebService--services deliverd over the web -it is a softeware system designed to support interoperable(platform independent ,whether devolpeb by java ,.net,PHP application) machine to machine intercation(communication over a network) over a network.
 datas are exhanged through request and response
 XML is popular message exchange format for request n response ,same as JSON
-Service Definition- it is contract between service provider and consumer(it will send req/resp format,req structure,resp structure,endpoint.)
-Tranport-it defines how service is called (HTTP and MQ formats)
+Service Definition- it is contract between service provider and consumer(it will send req/resp format,req structure,resp structure,endpoint..)
+Transport-it defines how service is called (HTTP and MQ formats)
 MQ-communication over a queue(Web sphere to tranport)
 Groups of webservices
-SOAP(Simple Object Access protocol)-poses poses restriction over XML format between service producer n consumer
+SOAP(Simple Object Access Protocol)-poses poses restriction over XML format between service producer n consumer
 SOAP tells specific way of building webservices,in the XML used as response exchange format,SOAP defines specific XML req n resp ,SOAP doesnt pose any restriction on transport
 SOAP Body-it contains SOAP envelop  which has header(it contains meta info like authentication,signatures,it is optional) and body(it has req n resp)
 in SOAP service definition done by WSDL(Web service definition language) which defines end points of service n where operations are exposed,adding course,deleting
-Structure of WSDL-endpoint,all operation,req service,resp service
+Structure of WSDL-endpoint,all operation,req service,resp service.
 
 Rest-it defines architectural approach,tern coined by Roy fieling,this REST will make best use of HTTP 
 Rest=ajax+http  (methods n status code)
@@ -1002,31 +1014,55 @@ REST vs SOAP-
 SOAP -its a format of xml,data excahnge is always in XML,standard definition,no restriction on transport(web or MQ),not easier to implement
 REST-architectural style,no strict data exchange format (can be xml,json),no standard defn,transport is done only through HTTP
 , these are easier to implement
-11.1
+we can build REST api without spring boot then why SB -to provide best framework.
+how to build Restweb service-
+import dependency from spring web,use created class with SPA annotation,run as java application
+
+how req are handelled- 
+first goes to DS irrespective of the url bcz DS is mapped to root url [/]
+DS map to controller
+DS is auto configured by "DispatcherServketAutoConfiguration"
+how Bean object is converted to JSON - by response body(used @restcontroller) + jacksonHttpMessageConverters
+who is mapping error mapping whenever we type wrong url ?-- auto mapped by "ErrorMvcAutoConfiguration"
+how are all jars are available like spring,springMvc,jackson,tomcat - bcz of 'starter project' which downloads these jars
+
+path variables //user{id}-- to retrive perticular details
+
+GET- to retrieve details of resource
+POST- create new resource
+PUT- to update an existing resource
+PATCH- to update a part of a resource
+in industry rest api is build with plurals
+
+Talend API Tester makes it easy to invoke, discover and test HTTP and REST APIs. ---add this chrome extention in chrome ,this is mainly used to send the data....
+ 200-success, 201-created, 204-no content, 401-unauthoriised , 400-bad request, 500-server error
+
+to make proper response structure use @ResponseStatus(code = HttpStatus.NOT_FOUND) //it will show message in 404
+springboot devTools is disabled when you run a java JAR file
+
+@ControllerAdvice is a specialized form of the spring's stereotype annotation which allows handling exceptions across the whole application in one global handling component.
+
+whenever u build restApi  u should think in consumer perspective..
+
+Advance features od Rest Api-documentation(open Api),content negotioation(json),interbationalisation(i18n),Hteoas,filter,monitor
+challenges-accuracy(upto date),consistency,
+Rest api documentation by-swagger(it is format for visualising the specification for documentation,it has various tools) and open api(it uses swagger,it is a language agnostic api,it helps in discover and understand rest api),swagger UI is to visualize and interact with rest api(where u will see all the details of controller)
+content negotioation-which gives content in diff form(mime types) n language for the same resource which helps consumer n producer to negotiate for the content type
+interbationalisation(i18n) is for languages- it uses HTTP request header -accept languange is used
+Versioning of rest Api- break change,ex-spling names like first n last name.types-url,header,mediatype,reqparameter
+HATEOAS-(hypernation as the engine of the application state)-to enhance rest api in response with custom formats.
+Filtering- static filtering(same filtering for a bean across diff rest api),customized filtering(for a bean of specific rest api)
+serialization-is converting object into stream ex:JSON which is done by jackson (@JsonProperty)
+SpringBoot actuator provides production ready features like beans,health info which is default,metrics,mappings
+HAL(JSON Hypertext Application Language)-its a simple format that gives a consistant n easy way to hyperlink btwn resources
+HAL explorer api explorer dor restful hypermedia api using HAL,it will enable non technical teams to play with api
+@Entity by which JPA will manage the database
+h2 is database lib to manage db
+ambigous mapping-generic mapping using jpa
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Volatile keyword is used to modify the value of a variable by different threads. It is also used to make classes thread safe. It means that multiple threads can use a method and instance of the classes at the same time without any problem.
 
 
 

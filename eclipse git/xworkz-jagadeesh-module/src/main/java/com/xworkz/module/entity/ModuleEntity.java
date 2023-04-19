@@ -1,6 +1,7 @@
 package com.xworkz.module.entity;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,7 +21,7 @@ import lombok.Data;
 @NamedQuery(name="email",query = "select count(*)  from ModuleEntity ent where ent.email=:emails")
 @NamedQuery(name="sign",query = "select ent  from ModuleEntity ent where ent.userId=:uby")
 @NamedQuery(name = "loginCount" ,query = "update ModuleEntity ent set ent.signInCount=:lc where ent.userId=:ui")
-@NamedQuery(name = "passUpdate", query = "update ModuleEntity ent set ent.password=:pby , ent.passwordReset=:rby where ent.userId=:vby")
+@NamedQuery(name = "passUpdate", query = "update ModuleEntity ent set ent.password=:pby , ent.passwordReset=:rby,ent.passTimeOut=:tby where ent.userId=:vby")
 @NamedQuery(name = "userEmail",query = "select ent from ModuleEntity ent where ent.email=:eby ")
 public class ModuleEntity {
 	@Id
@@ -48,4 +49,10 @@ public class ModuleEntity {
 	private int signInCount;
 	@Column(name = "passwordReset")	
 	private Boolean passwordReset;
+	
+	@Column(name = "passTimeOut")	
+	private LocalTime passTimeOut;
+	
+	@Column(name = "picPath")	
+	private String picPath;
 }

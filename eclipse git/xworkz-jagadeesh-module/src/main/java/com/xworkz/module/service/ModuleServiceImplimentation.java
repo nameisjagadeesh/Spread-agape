@@ -1,9 +1,9 @@
 package com.xworkz.module.service;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.util.Random;
@@ -43,7 +43,7 @@ public class ModuleServiceImplimentation implements ModuleService {
 
 	@Autowired
 	private PasswordEncoder encoder;
-	
+
 	String resetPassword = DefaultPasswordGenerator.generate(6);
 
 	@Override
@@ -78,11 +78,12 @@ public class ModuleServiceImplimentation implements ModuleService {
 			entity.setAgreement(dto.getAgreement());
 			entity.setPassword(dto.getPassword());
 			entity.setEmail(dto.getEmail());
-			entity.setPasswordReset(false); 
+			entity.setPasswordReset(false);
+			entity.setPassTimeOut(LocalTime.of(0, 0, 0));
 			// BeanUtils.copyProperties(dto, entity);
 			entity.setPassword(encoder.encode(dto.getPassword()));
 			boolean saved = this.moduleRepository.save(entity);
-			if(saved) {
+			if (saved) {
 				sendMail(dto.getEmail(), "Thank you and your registeration is completed");
 			}
 			log.info("saved in repo" + saved);
@@ -148,35 +149,39 @@ public class ModuleServiceImplimentation implements ModuleService {
 
 	@Override
 	public ModuleDTO updatePass(String userId, String password, String confirmPassword) {
-		// ModuleEntity entity=new ModuleEntity() ;
+//		ModuleEntity entity=new ModuleEntity() ;
+//		entity.setPassTimeOut(LocalTime.now().of(0, 0, 0));
 		if (password.equals(confirmPassword)) {
-			boolean update = this.moduleRepository.passwordUpdate(userId, encoder.encode(password), false);
+			boolean update = this.moduleRepository.passwordUpdate(userId, encoder.encode(password), false,
+					LocalTime.of(0, 0, 0));
 			log.info("--" + update);
 		}
 		return ModuleService.super.updatePass(userId, password, confirmPassword);
 	}
 
-	
 	@Override
 	public ModuleDTO resetPass(String email) {
-		ModuleEntity ent=this.moduleRepository.resetPassword(email);
-		if(ent!=null) {
+		ModuleEntity ent = this.moduleRepository.resetPassword(email);
+		if (ent != null) {
 			ent.setPassword(encoder.encode(resetPassword));
 			ent.setUpdatedBy("System");
 			ent.setUpdatedDate(LocalDate.now());
 			ent.setSignInCount(0);
 			ent.setPasswordReset(true);
-			boolean update=this.moduleRepository.updateUser(ent);
-			if(update) {
-				sendMail(ent.getEmail(),"your reset password is :"+resetPassword);
+			ent.setPassTimeOut(LocalTime.now().plusSeconds(60));
+			boolean update = this.moduleRepository.updateUser(ent);
+			if (update) {
+				sendMail(ent.getEmail(),
+						"your reset password is :" + resetPassword + " kindly login within 60 seconds");
 			}
-			log.info("updated pass"+update);
-			ModuleDTO uDto= new ModuleDTO();
+			log.info("updated pass" + update);
+			ModuleDTO uDto = new ModuleDTO();
 			BeanUtils.copyProperties(ent, uDto);
 			return uDto;
 		}
 		return null;
 	}
+
 //	@Override
 //	public boolean sendMail(String from, String to, String subject) {
 //		String hostName="smtp.gmail.com";
@@ -200,10 +205,10 @@ public class ModuleServiceImplimentation implements ModuleService {
 //		return true;
 //	}
 	@Override
-	public boolean sendMail(String email,String text) {
+	public boolean sendMail(String email, String text) {
 		String portNumber = "587";// 485,587,25
 		String hostName = "smtp.office365.com";
-		String fromEmail = "jagadeeshvallagi@outlook.com";  //jagadeeshvallagi@outlook.com
+		String fromEmail = "jagadeeshvallagi@outlook.com"; // jagadeeshvallagi@outlook.com
 		String password = "Ivar@2834";
 		String to = email;
 
@@ -225,7 +230,8 @@ public class ModuleServiceImplimentation implements ModuleService {
 		try {
 			message.setFrom(new InternetAddress(fromEmail));
 			message.setSubject("Registration  Completed");
-			//message.setText("Thanks for registration and your password is" + resetPassword);
+			// message.setText("Thanks for registration and your password is" +
+			// resetPassword);
 			message.setText(text);
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 			Transport.send(message);
@@ -235,6 +241,7 @@ public class ModuleServiceImplimentation implements ModuleService {
 		}
 		return true;
 	}
+
 	public final static class DefaultPasswordGenerator {
 		private static final String[] charCategories = new String[] { "abcdefghijklmnopqrstuvwxyz",
 				"ABCDEFGHIJKLMNOPQRSTUVWXYZ", "0123456789" };
@@ -252,6 +259,18 @@ public class ModuleServiceImplimentation implements ModuleService {
 			return new String(password);
 		}
 //		String password = DefaultPasswordGenerator.generate(6);[use this reference to generate the password]
+	}
+
+	@Override
+	public ModuleDTO profileUpdate(String userId, String email, Long number, String path) {
+		ModuleEntity ent = this.moduleRepository.resetPassword(email);
+		ent.setEmail(email);
+		ent.setUserId(userId);
+		ent.setNumber(number);
+		ent.setPicPath(path);
+		boolean up = this.moduleRepository.updateUser(ent);
+		log.info("updated here " + up);
+		return ModuleService.super.profileUpdate(userId, email, number, path);
 	}
 
 }

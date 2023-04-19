@@ -9,6 +9,8 @@ import java.util.HashMap;
  * put method will insert and update the value
  * put while updating ,if element exist then it will update value ,if nit exist it will add the elemnt
  * where as replace method only do if element exist otherwise will not update
+ * Hashmap-non sync,not thread safe ,faster,allows one null key and any null values
+ * hashtable-sync,threadsafe,slower,dont allow any null values
  */
 public class MapAndHashMap {
 

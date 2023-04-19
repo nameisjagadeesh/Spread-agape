@@ -1,8 +1,7 @@
 package com.xworkz.module.dto;
 
-import java.time.LocalDate;
+import java.time.LocalTime;
 
-import javax.print.attribute.standard.DateTimeAtCreation;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -28,5 +27,6 @@ public class ModuleDTO {
 	
 	private int signInCount;
 	private Boolean passwordReset; 
-
+	private LocalTime passTimeOut;
+	private String picPath;
 }

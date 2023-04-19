@@ -1,5 +1,6 @@
 package com.xworkz.module.respository;
 
+import java.time.LocalTime;
 import java.util.Collections;
 import java.util.List;
 
@@ -40,6 +41,6 @@ public interface ModuleRepository {
 
 	boolean updateUser(ModuleEntity entity);
 
-	boolean passwordUpdate(String userId, String password, Boolean passwordReset);
+	boolean passwordUpdate(String userId, String password, Boolean passwordReset,LocalTime timeout);
 
 }

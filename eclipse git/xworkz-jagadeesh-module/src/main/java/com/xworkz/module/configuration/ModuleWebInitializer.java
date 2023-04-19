@@ -36,18 +36,18 @@ public class ModuleWebInitializer extends AbstractAnnotationConfigDispatcherServ
 		configurer.enable();
 	}
 
-//	@Override
-//	protected void customizeRegistration(Dynamic registration) {
-//
-//		String tempDrive = "J:\\temporary";
-//		int maxUploadSizeInMb = 5 * 1024 * 1024;
-//		File uploadDirectory = new File((tempDrive));
-//		MultipartConfigElement multipartConfigElement = new MultipartConfigElement(uploadDirectory.getAbsolutePath(),
-//				maxUploadSizeInMb, maxUploadSizeInMb * 2, maxUploadSizeInMb / 2);
-//
-//		registration.setMultipartConfig(multipartConfigElement);
-//		super.customizeRegistration(registration);
-//	}
+	@Override
+	protected void customizeRegistration(Dynamic registration) {
+
+		String tempDrive = "J:\\temporary";
+		int maxUploadSizeInMb = 5 * 1024 * 1024;
+		File uploadDirectory = new File((tempDrive));
+		MultipartConfigElement multipartConfigElement = new MultipartConfigElement(uploadDirectory.getAbsolutePath(),
+				maxUploadSizeInMb, maxUploadSizeInMb * 2, maxUploadSizeInMb / 2);
+
+		registration.setMultipartConfig(multipartConfigElement);
+		super.customizeRegistration(registration);
+	}
 
 	
 }

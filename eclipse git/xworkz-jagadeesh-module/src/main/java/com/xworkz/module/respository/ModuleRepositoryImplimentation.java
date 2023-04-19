@@ -1,5 +1,6 @@
 package com.xworkz.module.respository;
 
+import java.time.LocalTime;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -155,7 +156,7 @@ public class ModuleRepositoryImplimentation implements ModuleRepository {
 	}
 
 	@Override
-	public boolean passwordUpdate(String userId, String password, Boolean passwordReset) {
+	public boolean passwordUpdate(String userId, String password, Boolean passwordReset,LocalTime timeout) {
 		EntityManager manager = this.entityManagerFactory.createEntityManager();
 		try {
 
@@ -165,6 +166,7 @@ public class ModuleRepositoryImplimentation implements ModuleRepository {
 			query.setParameter("pby", password);
 			query.setParameter("rby", passwordReset);
 			query.setParameter("vby", userId);
+			query.setParameter("tby", timeout);
 			query.executeUpdate();
 			transaction.commit();
 			return true;

@@ -10,11 +10,16 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Configuration
 @ComponentScan("com.xworkz.module")
+@Slf4j
 public class ModuleConfiguration {
 
 	public ModuleConfiguration() {
@@ -54,6 +59,13 @@ public class ModuleConfiguration {
 	
 	@Bean
 	public PasswordEncoder encoder() {
+		log.info("Running the encoder method in config class");
 		return new BCryptPasswordEncoder();
+	}
+	
+	@Bean
+	public MultipartResolver multipartResolver() {
+		log.info("Running the multipartResolver method in config class");
+		return new StandardServletMultipartResolver();
 	}
 }
