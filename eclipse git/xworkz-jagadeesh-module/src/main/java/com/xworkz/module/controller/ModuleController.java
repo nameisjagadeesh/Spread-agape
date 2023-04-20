@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.xworkz.module.dto.ModuleDTO;
+import com.xworkz.module.entity.TechnologiesEntity;
 import com.xworkz.module.service.ModuleService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -180,5 +181,21 @@ public class ModuleController {
 		ServletOutputStream out = response.getOutputStream();
 		IOUtils.copy(input, out);
 		response.flushBuffer();
+	}
+	
+	@PostMapping("/techno")
+	public String onTechnologies(String userId,TechnologiesEntity tech,Model model) {
+		ModuleDTO tDto=this.moduleService.techUpdate(userId, tech);
+		log.info("techs dto"+tDto);
+		model.addAttribute("techie", "User Technologies added Successfully");
+		model.addAttribute("tech", tech);
+		return "AddTechnology";
+	}
+	
+	@GetMapping("/show")
+	public String onTechView(@RequestParam String userId,Model model) {
+		List<TechnologiesEntity> techList=this.moduleService.techList(userId);
+		model.addAttribute("techList", techList);
+		return "ShowTechnology";
 	}
 }

@@ -30,6 +30,7 @@ import org.springframework.stereotype.Service;
 
 import com.xworkz.module.dto.ModuleDTO;
 import com.xworkz.module.entity.ModuleEntity;
+import com.xworkz.module.entity.TechnologiesEntity;
 import com.xworkz.module.respository.ModuleRepository;
 
 import lombok.extern.slf4j.Slf4j;
@@ -271,6 +272,25 @@ public class ModuleServiceImplimentation implements ModuleService {
 		boolean up = this.moduleRepository.updateUser(ent);
 		log.info("updated here " + up);
 		return ModuleService.super.profileUpdate(userId, email, number, path);
+	}
+	
+	@Override
+	public ModuleDTO techUpdate(String userId, TechnologiesEntity tech) {
+		//ModuleDTO dto=new ModuleDTO();
+		ModuleEntity ent=this.moduleRepository.signIn(userId);
+		ent.setCreatedBy(userId);
+		tech.setModuleEntity(ent);
+		log.info("accessing entities"+ent);
+		boolean saved=this.moduleRepository.techSave(tech);
+		log.info("technologies saved here"+saved);
+		return ModuleService.super.techUpdate(userId, tech);
+	}
+	@Override
+	public List<TechnologiesEntity> techList(String userId) {
+		ModuleEntity ent=this.moduleRepository.signIn(userId);
+		List<TechnologiesEntity> techList=ent.getTech();
+		log.info("getting technologies list"+techList);
+		return techList;
 	}
 
 }

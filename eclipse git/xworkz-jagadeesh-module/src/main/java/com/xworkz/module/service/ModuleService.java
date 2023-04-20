@@ -7,44 +7,57 @@ import java.util.Set;
 import javax.validation.ConstraintViolation;
 
 import com.xworkz.module.dto.ModuleDTO;
+import com.xworkz.module.entity.TechnologiesEntity;
 
 public interface ModuleService {
 
 	Set<ConstraintViolation<ModuleDTO>> validateAndSave(ModuleDTO dto);
 
-	boolean sendMail(String email,String text);
-	
-	default List<ModuleDTO> findAll(){
+	boolean sendMail(String email, String text);
+
+	default List<ModuleDTO> findAll() {
 		return Collections.emptyList();
 	}
-	
+
 	default Long findByUser(String user) {
 		return null;
 	}
-	
+
 	default Long findByEmail(String email) {
 		return null;
 	}
-	
+
 	default Long findByNumber(Long number) {
 		return null;
 	}
-	
-	default ModuleDTO signIn(String user,String password) {
+
+	default ModuleDTO signIn(String user, String password) {
 		return null;
-		
-		
+
 	}
+
 	default ModuleDTO resetPass(String email) {
 		return null;
-		
+
 	}
-	default ModuleDTO updatePass(String userId,String password,String confirmPassword) {
+
+	default ModuleDTO updatePass(String userId, String password, String confirmPassword) {
 		return null;
-		
+
 	}
-	default ModuleDTO profileUpdate(String userId,String email,Long mobile,String path) {
+
+	default ModuleDTO profileUpdate(String userId, String email, Long mobile, String path) {
 		return null;
-		
+
+	}
+
+	default ModuleDTO techUpdate(String userId, TechnologiesEntity tech) {
+		return null;
+
+	}
+
+	default List<TechnologiesEntity> techList(String userId) {
+		return null;
+
 	}
 }

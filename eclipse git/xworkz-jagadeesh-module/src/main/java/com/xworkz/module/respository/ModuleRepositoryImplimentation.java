@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.xworkz.module.entity.ModuleEntity;
+import com.xworkz.module.entity.TechnologiesEntity;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -156,7 +157,7 @@ public class ModuleRepositoryImplimentation implements ModuleRepository {
 	}
 
 	@Override
-	public boolean passwordUpdate(String userId, String password, Boolean passwordReset,LocalTime timeout) {
+	public boolean passwordUpdate(String userId, String password, Boolean passwordReset, LocalTime timeout) {
 		EntityManager manager = this.entityManagerFactory.createEntityManager();
 		try {
 
@@ -186,9 +187,23 @@ public class ModuleRepositoryImplimentation implements ModuleRepository {
 			query.setParameter("eby", email);
 			Object object = query.getSingleResult();
 			ModuleEntity casted = (ModuleEntity) object;
-			log.info("--"+casted);
+			log.info("--" + casted);
 			return casted;
-			
+
+		} finally {
+			manager.close();
+		}
+	}
+
+	@Override
+	public boolean techSave(TechnologiesEntity techEnt) {
+		EntityManager manager = this.entityManagerFactory.createEntityManager();
+		try {
+			EntityTransaction transaction  =manager.getTransaction();
+			transaction.begin();
+			manager.persist(techEnt);
+			transaction.commit();
+			return true;
 		} finally {
 			manager.close();
 		}

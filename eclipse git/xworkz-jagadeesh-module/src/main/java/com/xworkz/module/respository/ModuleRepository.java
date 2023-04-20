@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import com.xworkz.module.entity.ModuleEntity;
+import com.xworkz.module.entity.TechnologiesEntity;
 
 public interface ModuleRepository {
 
@@ -36,6 +37,7 @@ public interface ModuleRepository {
 		return null;
 		
 	}
+	
 
 	boolean login(String user, int count);
 
@@ -43,4 +45,11 @@ public interface ModuleRepository {
 
 	boolean passwordUpdate(String userId, String password, Boolean passwordReset,LocalTime timeout);
 
+	boolean techSave(TechnologiesEntity techEnt);
+	
+	default List<TechnologiesEntity> showTech(String viewer){
+		return null;
+		
+	}
+	
 }

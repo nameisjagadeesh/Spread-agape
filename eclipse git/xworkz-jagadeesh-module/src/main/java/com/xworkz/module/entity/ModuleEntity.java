@@ -2,11 +2,15 @@ package com.xworkz.module.entity;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.print.attribute.standard.DateTimeAtCreation;
 
@@ -55,4 +59,7 @@ public class ModuleEntity {
 	
 	@Column(name = "picPath")	
 	private String picPath;
+	
+	@OneToMany(mappedBy = "moduleEntity" ,fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+	private List<TechnologiesEntity> tech;
 }
