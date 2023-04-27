@@ -1,7 +1,10 @@
 package com.xworkz.data;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 //increase salary by 10% if age is >25
@@ -21,7 +24,7 @@ public class EmployeeList {
 
 		System.out.println("before increament" + employee);
 		List<EmplyeeDTO> incrementedSalary = employee.stream().map(e -> {
-			if (e.getAge()> 25) {
+			if (e.getAge() > 25) {
 				e.setSalary(e.getSalary() * 1.10);
 			}
 			return e;
@@ -30,10 +33,12 @@ public class EmployeeList {
 
 		System.out.println("increamented salary" + incrementedSalary);
 		System.out.println("~~~~~~~~~~~");
-		List<Boolean> g = employee.stream()
-				.map(e -> e.getName().endsWith("g"))
-				.collect(Collectors.toList());
+		List<Boolean> g = employee.stream().map(e -> e.getName().endsWith("g")).collect(Collectors.toList());
 		System.out.println(g);
+
+		System.out.println("~~~~~~~~~~~~~~~");
+		Map<String, List<EmplyeeDTO>> d = employee.stream().collect(Collectors.groupingBy(EmplyeeDTO::getName));  
+		System.out.println(d);
 
 	}
 

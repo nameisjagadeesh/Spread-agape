@@ -2,6 +2,7 @@ package com.xworkz.module.entity;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -19,6 +20,7 @@ import lombok.Data;
 @Entity
 @Table(name = "module_table")
 @Data
+
 @NamedQuery(name = "find" ,query = "select ent from ModuleEntity ent")
 @NamedQuery(name="user",query = "select count(*)  from ModuleEntity ent where ent.userId=:user")
 @NamedQuery(name="number",query = "select count(*)  from ModuleEntity ent where ent.number=:numbers")
@@ -60,6 +62,7 @@ public class ModuleEntity {
 	@Column(name = "picPath")	
 	private String picPath;
 	
-	@OneToMany(mappedBy = "moduleEntity" ,fetch = FetchType.EAGER,cascade = CascadeType.ALL)
-	private List<TechnologiesEntity> tech;
+	//EAGER is to load both parent entity along with child entities
+	@OneToMany(mappedBy = "moduleEntity" ,fetch = FetchType.LAZY,cascade = CascadeType.PERSIST) //moduleEntities can have different properties
+	private List<TechnologiesEntity> tech; //=new ArrayList<TechnologiesEntity>();
 }

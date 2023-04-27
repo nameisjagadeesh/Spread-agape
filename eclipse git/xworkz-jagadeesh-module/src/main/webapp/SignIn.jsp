@@ -50,14 +50,14 @@
 						type="checkbox" onclick="onPassword()">Show Password <br></td>
 				</tr>
 				<tr>
-					<td><input type="submit" value="SignIn"
+					<td ><input type="submit" value="SignIn"
 						class="btn btn-primary" id="submitId" /></td>
 				</tr>
 
 				<tr>
 
 
-					<td><a href="PassReset.jsp">Password Reset </a></td>
+					<td> <span style="color: red">Forgot password.?</span>  <a href="PassReset.jsp">click here to reset </a></td>
 				</tr>
 
 			</table>

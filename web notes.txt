@@ -14,13 +14,104 @@ div tag to seperate contents in different boxes
 position=static,relative( addidng margin relative to its positioning left or right),absolute(positioning relative to the parent(entire body of webpage) div) and fixed position
 font family to add various fonts
 
- Bootstrap is a free front-end framework for faster and easier web development. Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins.
- bootstrap use to create a responsive webpage
- Responsive web design is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops.
+ BOOTSTRAP IS A FREE FRONT-END FRAMEWORK FOR FASTER AND EASIER WEB DEVELOPMENT. BOOTSTRAP INCLUDES HTML AND CSS BASED DESIGN TEMPLATES FOR TYPOGRAPHY, FORMS, BUTTONS, TABLES, NAVIGATION, MODALS, IMAGE CAROUSELS AND MANY OTHER, AS WELL AS OPTIONAL JAVASCRIPT PLUGINS.
+ BOOTSTRAP USE TO CREATE A RESPONSIVE WEBPAGE
+ RESPONSIVE WEB DESIGN IS ABOUT CREATING WEB SITES WHICH AUTOMATICALLY ADJUST THEMSELVES TO LOOK GOOD ON ALL DEVICES, FROM SMALL PHONES TO LARGE DESKTOPS.
+ 
+Sql installation
+mandatory updates :no
+select custom
+select products:
+
+JavaScript-
+to make html dynamic
+java vs JS- JS is a interpreted programing language like python (toy language,they works slow,execute line by line) n java is compiled(fast)
+js is supported by all browsers
+snipet will execute our code once we finish entire code   --alert is a function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<properties>
+		<spring.version> 5.3.24</spring.version>
+		<lombok.version>1.18.24</lombok.version>
+		<quarkus.version>1.13.7.Final</quarkus.version>
+		<jstl.version>1.2</jstl.version>
+		<hibernate.version>5.6.15.Final</hibernate.version>
+		<mysql.version>8.0.32</mysql.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-hibernate-validator -->
+		<dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-hibernate-validator</artifactId>
+			<version>${quarkus.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
+				<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+
+
+
+	</dependencies>
  
  
 
-
+https://github.com/in28minutes/spring-microservices ------>>>Notes
 
 
 

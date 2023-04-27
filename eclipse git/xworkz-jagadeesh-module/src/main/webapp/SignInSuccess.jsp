@@ -33,7 +33,7 @@
 				src="download?fileName=${pic}" height="50" width="80">
 		</div>
 	</nav>
-	<div align="center">User Name:${user}</div>
+	<h2><div align="center" style="color: red"> Hey WellCome : ${user}</div> </h2> 
 
 	<h1 style="color: green;">LOGIN SUCESSFULLY</h1>
 	<a

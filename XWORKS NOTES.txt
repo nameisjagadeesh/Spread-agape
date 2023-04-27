@@ -476,7 +476,7 @@ It will look for no argument constructor
 @bean will register an object
 @component is used when we have .java and spring will create and manage the object
 Whenever a object manages other objects it is called as container ex: Applicationcontext(interface)
-Primary container/hierarchy of spring: beanFactory(core container , dont support AOP ) ApplicationContext(advanced container with more feature,  support AOP)-WebWpplicationContext (support webApplication development)
+Primary container/hierarchy of spring: beanFactory(core container , dont support AOP,has only XML support ) ApplicationContext(advanced container with more feature,  support AOP,has annotation n reactive programming)-WebWpplicationContext (support webApplication development)
 AOP: aspect oriented program( it is a programming style)..AOP isolates the concerns of your application, reduces code clutter, and improves the maintainability and readability of your code.
 bean names: when we have two or more beans of same datatype
 @bean is only used on top of the method , not constructor or class
@@ -486,7 +486,7 @@ When we use java literals initialisation in spring (=“”) it will be hardcode
 @value cant be used within the method and over the @bean
 GetBean method: needs ref of container
 AutoWired method : needs component @autowired is annotation to get the ref of other bean managed by spring, it also initialise the bean of custom type
-@Qualifier:to refer a bean by name 
+@Qualifier:to refer a bean by name  when there are multiple objects
 tostring will loop and access the references
 Spring is designed by following IOC(inversion of control) where the task is done by third party
 IOC: Inverting the managing  of object via spring
@@ -852,6 +852,7 @@ this block will use exceptional heirarchy and will catch those exeption we decla
 }
 catch(NumberFormatException | NullPointerException){ to catch multiple exception
 }
+finally{in which release operation occurs n cleanup activity }- we can avoid finally block by system.exit 	
 return statement in finally will override the return statement of try,finally is used in database call or some file input output ,whenever we want to close the connection to database or stream
 
 Checked exception is checked at compile time -handle this by throws or surround with try catch block ex-ClassNotFoundException, SocketException, SQLException, IOException, FileNotFoundException
@@ -1004,7 +1005,7 @@ Structure of WSDL-endpoint,all operation,req service,resp service.
 
 Rest-it defines architectural approach,tern coined by Roy fieling,this REST will make best use of HTTP 
 Rest=ajax+http  (methods n status code)
-REST will defines the services using different concept of HTTP that already presend
+REST will defines the services using different concept of HTTP that already present
 resource-Every content in the REST architecture is considered a resource. (/user/jagadeesh/list)
 resource can have XML,HTNL,JSON
 URI- for identifying each resource of the REST architecture.
@@ -1064,5 +1065,138 @@ ambigous mapping-generic mapping using jpa
 
 Volatile keyword is used to modify the value of a variable by different threads. It is also used to make classes thread safe. It means that multiple threads can use a method and instance of the classes at the same time without any problem.
 
+using @configuration we can bind all  properties 
 
+DI helps to create objects in a order which is automatic
+5 types of DI-constructor,setter,autowired,circular(setter internally in which classes depend on each others),lookup methods(occurs in scopes).
+IOC- or spring container
+by construction injection(CI) partial injection is not possible(taking 2 variables out of 4 variables to create object) but it can be achieved by setter injection(SI),CI always create new object if any modification done which is not in SI,if we want pass all properties of bean in a order we use CI n if we want to pass only few properties we use SI ,CI doesnt overrride the setter properties but SI override the constructor properties
+
+@Required is applied on setter methods ,when we use the property value should be initialized (will not take default values)
+@primary is same as @qualifier which is used at bean creation by giving preference when there are multiple objects
+
+different ways of writing lifecycle methods in spring-- 1. using XML(declarative approach) 2.using spring interface(programmatic approach :initializingBean,disposableBean) 3.using annotation(@postconstruct n @predestroy)
+
+common implementation of ApplicationContext- FileSystemXmlApplicationContext,ClassPathXmlApplicationContext,WebXmlApplicationContext
+
+stereotype annotations :when we use the annotation on top of class n objects are created
+types-component,service,repositoty,controller,restcontroller
+
+different modules of spring- coremodule,data access,web,AOP,instrumentation,testing
+
+profile in spring- when we move our codes to diff env  they will be modified to avoid this we use profile
+innerBeans -defining one bean inside the other bean ,it is used whenerver w bean is used for only one perticular property ,innerbean supports both CI n SI
+
+
+ORM is a technique that act as bridge  between object oriented programes and relational database ,as every operation need to be in object format (save,update,delete,select),it is mainly used for DB operations.
+
+JPA is one of the ORM specification ,it is a java specification used to persist data between DB n object n act as bridge.
+Mapping rule of JPA-define one entity(pojo) class for the one table,define one variable for one column,then object is converted into one row.
+Advantages of JPA-DB independent,easy to develop DB operations,supports JPQL/HQL,it will handle the datatype n parameters
+3 JPA repository-crudRepository,pagingAndSortingRepository,JpaRepository (all three are interface)
+JpaRepository works only for relational DB like mySql,oracle
+pagingAndSortingRepository n crudRepository works for both SQL n NoSQL DB.
+predefined methods given by Repository intrface-save,delete,findById,findAll,deleteById,count,existById,
+
+bean wiring- linking two objects
+modes of autowiring-no,byname,bytype,constructor,autodetect
+@autowired(provided by spring) n @inject(provided by java EE framework used for non spring application)
+
+SQL queries constructed using Table name n column name where as JPQL/HQL queries constructed using class name in place of table name and variable name in place of coloumn name
+JPQL is the specification n HQL is the implementation
+we cannt write insert queries using jpql
+
+findById() vs getOne()- both used to fetch one row data
+findById() present in crudRepository where as getOne() present in jpaRepository
+if data is not found in findById then it will return null (optional) while getOne throws EntityNotFoundException
+
+use of Dialect-dialect is a class defined in JPA ,all sql queries generated by dialect,if u move from one DB to another DB dialect should be modified EX- oracle10gDialect,MySQL8Dialect,PostgressDialect
+
+FetchType in JPA -it is used for select operationd used for Association Mapping or collection mapping 
+types -EAGER is to load both parent entity along with child entities ,LAZY is to load only parent entity n later can access child entity using getters
+FetchType is a enum internally
+there is no default fetchtype it depends upon the operation
+LAZY is used for one to many /many to many ,EAGER is one to one /many to one in which child is one
+
+Monolithic application problems-team dependency,scalability
+microserces are individual services whichare self contained n run as individual service
+microservices-scalled seperatlry,contained separatly ,one service can be developed by java n other by node 
+even if one service goes down other is not harmed
+how microservice communicate using api gateways,http request,
+
+
+AOP-it is a methodology to create applications
+Why Aop- flexibility to remove the cross cuttings from application,separates from business logic
+we can achieve AOP using xml n annotation
+//loggin,authentication,authoration,sanitization data which are separated called aspect
+@before("execution") to execute before any other method
+// @pointcut(within) - to execute a perticular class
+@afterReturning-
+
+
+Ajile- term refers to ability to move quickly by becoming more flexible n adaptable,agile is a set of methods n practices that focuses on iterative development
+adopting while changing env ,agile is good for org for their sustainace n growth
+requirments  n solutions are obtained thanks to self organising cross functional teams collab
+
+agile vs waterfall-
+agile is a continous iteration life cycle model for developing n testing a software with flexibility,collabarative,process is short period by dividing into sprints,changes may be made even after initial planning,softaware development is collection of many different projects,testing is done in same iteration
+waterfall- is linear sequential life cycle model for developing n testing a software with rigidity in adopting,least collabarative,process broken into several phases,changes cant be made once development begins,SD is single one,testing comes after the build phases
+
+parts of the ajile -
+customer satisfaction,changing needs adressing,deliver frequently of products,work together with collab of developer n business individuals,motivated teams,face to face convo,working softaware,constant pace with sustainace development,good design,simplicity,self organized,reflect n adjust for effectiveness,
+
+increamental development-process divided into small workable increaent,folows previous increamnets
+ajile follows repeated cycles which helps in project evolvement over time
+ajile is iterative + increamental
+
+Types of agile methodologies-
+extreme programming-it is framework that enables teams to create a high quality soft n improves thier quality of life
+Kanban-method used to design,manage n improve the flow of systems .orgs can visualize n monitor their flow of work n limit thier work
+Lean -is set of tools n principles to remove waste to increase the speed of development,it focuses on maximazing value to client 
+Scrum- it is an implementation of the agile methodology
+crystal- focuses on people n their interactions rather than tools n processes
+Agile metrics-velocity,code quality,code covered.
+
+popular agile tools- github,jira,Trello,Zoho
+
+Jira- is a popular planning,tracking n managing tool used for software developments
+jira is known for bug tracking n agile project management
+why jira- it is all in one solution for multiple software n team related use cases,it helps create backlog,create sprint,create task,update status,managing release,code integration,managing workflow.
+
+EPIC- is an abstract view of what exactly we need ---story
+functonality- planing-->implementation-->testing-->review
+steps;
+Atlassian.net 
+give site name-->select type of prject-->role--->inivite teams--create project--add epic
+
+
+Test Env types-
+Software development life cycle(SDLC) = requirments->analyse->design->coding->test->product deployment
+static testing- wether requirments are feasible by review
+test env
+dev env- unit testing
+integrated env- SIT(system integration testing) testing, User Acceptance testing,SVP(performance) testing
+
+levels of Logs-info,debug,warning,error 
+SOLID principle-
+S- single responsibility  -one method used at multilevels 
+O- open close - code should be open for extension n close for modification (should be done by creating other class)
+L- list scores
+I- interface segregation
+D- DI
+
+Balanced Paranthesis- set of paranthesis which contain equal opening n closing paranthesis ,each closing paranthesis is recent one
+
+void should always before the method name .we can change public static
+we can overload main method
+we can use only Object methods in FI like String toString();
+anonymus inner class-creating a class without a name
+Sequential stream run on one core n one thread ,output is predictable n 
+parallel streams runs on multiple core n multiple threads ,output is not predictable
+Recursion-when a method is called on itself
+
+Junit-is a type of software where one individual set of code tested by itselft,unit test isolates one single peice of code(Clss) n varifies that piece working correctlt
+add a dependency--use @Test n use assertion methods
+TDD-test driver development
+Mockito is a Java-based framework used for unit testing of Java applications. 
 

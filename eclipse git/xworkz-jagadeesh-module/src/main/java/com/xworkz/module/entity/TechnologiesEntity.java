@@ -53,14 +53,14 @@ public class TechnologiesEntity extends AbstractAuditEntity {
 	@Column(name = "osType")
 	private String osType;
 
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "id", referencedColumnName = "id")
+	//LAZY is to load only parent entity
+	@ManyToOne(fetch = FetchType.EAGER, optional = false) //lazy is used bcz we dont want to fetch the entity details
+	@JoinColumn(name = "id", referencedColumnName = "id") //to store the foreign key
 	private ModuleEntity moduleEntity;
 
 	@Column(name = "createdBy")
 	@Override
-	public String getCreatedBy() {
-		
+	public String getCreatedBy() {		
 		return super.getCreatedBy();
 	}
 
@@ -105,8 +105,7 @@ public class TechnologiesEntity extends AbstractAuditEntity {
 	}
 
 	@Override
-	public void setUpdatedDate(LocalDateTime updatedDate) {
-		
+	public void setUpdatedDate(LocalDateTime updatedDate) {		
 		super.setUpdatedDate(updatedDate);
 	}
 }

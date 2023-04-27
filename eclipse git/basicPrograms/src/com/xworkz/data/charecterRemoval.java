@@ -14,9 +14,9 @@ public class charecterRemoval {
 	// not using inbuild method
 
 	public static void remove(String str, char c) {
-		int n = str.length();
+	//	int n = str.length();
 		String finalStr = "";
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < str.length(); i++) {
 			if (str.charAt(i) != c) {
 				finalStr = finalStr + str.charAt(i);
 			}
